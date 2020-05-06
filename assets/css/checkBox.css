@@ -1,0 +1,140 @@
+.check{
+    all: inherit;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    background-color: white;
+    border-radius: 7px;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 300ms;
+    text-align: center;
+    margin: 30px;
+    cursor: pointer;
+    vertical-align: middle;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.check:hover{
+    border: 3px solid rgb(128, 126, 126);
+}
+.check:checked{
+    background-image: url(../img/checked.png);
+    background-size: 15%;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    border: 3px solid #6ac259;
+}
+input[type="text"] {
+  background: none;
+  color: #c6c6c6;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 320px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #c6c6c6;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+input:focus ~ label, .group input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+  top: -14px;
+  font-size: 12px;
+  color: #2196F3;
+}
+input:focus ~ .bar:before,
+textarea:focus ~ .bar:before {
+  width: 320px;
+}
+.group {
+    position: relative;
+    margin: 45px 0;
+  }
+  .bar {
+    position: relative;
+    display: block;
+    width: 320px;
+  }
+  .bar:before {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0px;
+    position: absolute;
+    background: #2196F3;
+    -webkit-transition: 300ms ease all;
+    transition: 300ms ease all;
+    left: 0%;
+  }
+  
+label {
+    color: #838383;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    -webkit-transition: 300ms ease all;
+    transition: 300ms ease all;
+  }
+/*setup*/
+.--particulier::before{
+    content: url("https://img.icons8.com/dotty/80/000000/businessman.png");
+}
+.--particulier::after{
+    content: "Particulier";
+}
+.--entreprise::before{
+    content: url("https://img.icons8.com/dotty/80/000000/conference-call.png");
+}
+.--entreprise::after{
+    content: "Entreprise";
+}
+.--gaz::before{
+    content: url("https://img.icons8.com/ios/80/000000/gas.png");
+}
+.--gaz::after{
+    content: "Gaz";
+}
+.--electricite::before{
+    content: url("https://img.icons8.com/ios/80/000000/lightning-bolt.png");
+}
+.--electricite::after{
+    content: "Electricité";
+}
+.--fioul::before{
+    content: url("https://img.icons8.com/ios/80/000000/oil-industry.png");
+}
+.--fioul::after{
+    content: "Fioul";
+}
+.--autre::before{
+    content: url("https://img.icons8.com/ios/80/000000/add.png");
+}
+.--autre::after{
+    content: "Autre";
+}
+.--mesure::before{
+    content: url("https://img.icons8.com/carbon-copy/80/000000/tape-measure.png");
+}
+.--moins50::after{
+    content: "Moins de 50m2";
+}
+.--entre50100::after{
+    content: "Entre 50m2 et 100m2";
+}
+.--plus100::after{
+    content: "Plus de 100m2";
+}

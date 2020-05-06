@@ -1,0 +1,29 @@
+.formulaire-test{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0;
+}
+.formulaire-test ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.formulaire-test ul li{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.formulaire-test ul p {
+    padding: 0 30px;
+}
+.title h1{
+    font-weight: lighter;
+    text-decoration: underline  #DA657F;
+    text-align: center;
+}
