@@ -18,10 +18,10 @@ $action = $action ?? "index";
 // on récupère les paramètres
 $parameters = $_GET;
 
-require_once $_SERVER['DOCUMENT_ROOT']."/config/secret.php";
+// require_once $_SERVER['DOCUMENT_ROOT']."/config/secret.php";
 
-$pdo = new PDO('mysql:dbname='.$secret["db"]["dbname"].';host='.$secret["db"]["host"], $secret["db"]["username"], $secret["db"]['pwd']);
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// $pdo = new PDO('mysql:dbname='.$secret["db"]["dbname"].';host='.$secret["db"]["host"], $secret["db"]["username"], $secret["db"]['pwd']);
+// $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // on va décider du controller qui va gérer
 if($controller == "main"){
