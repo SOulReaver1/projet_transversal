@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/views/assets/css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="/views/accessibilityMenu/assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>    <script src="/views/accessibilityMenu/assets/js/script.js"></script>   
+    <title>Document</title>
+</head>
+<body>
+    <i class="fas fa-universal-access accessibilityLogo"></i>
+    <div class="accessibilityMenu">
+        <div class="headerAccessibilityMenu">
+            <h1>Menu d'accessibilté</h1>
+            <i class="fas fa-times accessibilityClose"></i>
+        </div>
+        <ul class="accessibilityList">
+            <li class="first" id="keyboard-nav">
+                <i class="fas fa-check" id="check-keyboardNav"></i>
+                <i class="far fa-keyboard"></i>
+                <h3>Navigation clavier</h3>
+            </li>
+            <li id="read-page">
+                <i class="fas fa-check" id="check-readPage"></i>
+                <i class="fab fa-readme"></i>
+                <h3>Lire la page</h3>
+            </li>
+            <li class="first" id="more-contrast">
+                <i class="fas fa-adjust"></i>
+                <h3>+ Contraste</h3>
+                <ul class="result-accessibility" id="contrast-result"></ul>
+            </li>
+            <li id="bigger-text">
+                <i class="fas fa-text-height"></i>
+                <h3>Texte plus gros</h3>
+                <ul class="result-accessibility" id="biggerText-result"></ul>
+            </li>
+            <li class="first" id="light-spacing">
+                <i class="fas fa-text-width"></i>
+                <h3>+ Espacement de texte</h3>
+                <ul class="result-accessibility" id="lightSpacing-result"></ul>
+            </li>
+            <li id="text-underline">
+                <i class="fas fa-check" id="check-underline"></i>
+                <i class="fas fa-underline"></i>
+                <h3>Souligner les liens</h3>
+            </li>
+            <li class="first bottom reset" id="reset-ls">
+                <i class="fas fa-sync-alt"></i>
+                <h3>Tout réinisialiser</h3>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
