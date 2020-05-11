@@ -13,7 +13,6 @@ $path = parse_url($url, PHP_URL_PATH);
 @list($null, $controller, $action, $event) = explode("/", $path);
 
 $controller = !empty($controller) ? $controller : "main";
-$action = $action ?? "index";
 
 // on récupère les paramètres
 $parameters = $_GET;
