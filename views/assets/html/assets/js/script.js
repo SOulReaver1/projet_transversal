@@ -5,7 +5,6 @@ let isLightSpacing = localStorage.getItem("light-spacing") || 0;
 let isContrast = localStorage.getItem("more-contrast") || 0;
 let isReadPage = localStorage.getItem("read-page") || false;
 
-window.addEventListener("DOMContentLoaded", () =>{
     let bool = false
     $(".accessibilityLogo").click(function(){
         bool = !bool
@@ -43,7 +42,7 @@ window.addEventListener("DOMContentLoaded", () =>{
     })
     $("#read-page").click(function(){
         isReadPage = !isReadPage
-        readPage()
+        readPage();
     })
     $("#more-contrast").click(function(){
         if(isContrast < 4){
@@ -77,17 +76,27 @@ window.addEventListener("DOMContentLoaded", () =>{
         }
         lightSpacing()
     })
-})
 
 function readPage(){
     if(isReadPage){
         $('#check-readPage').css({"display": "block"})
         localStorage.setItem("read-page", true)
+        $("#content").find("h1, h2, h3, h4, h5, h6, p, a").each(function(key, value){
+            $(this).one("click", function(e){
+                if(isReadPage){
+                    const synth = window.speechSynthesis;
+                    const text = value
+                    const toSpeak = new SpeechSynthesisUtterance(text.innerHTML);
+                    synth.speak(toSpeak); 
+                }
+            })
+        })
     }else{
         $('#check-readPage').css({"display": "none"})
         localStorage.removeItem("read-page")
     }
 }
+
 
 function moreContrast(){
     $("#contrast-result").empty()
@@ -107,23 +116,41 @@ function keyboardNav(){
     if(navKeyboard){
         $('#check-keyboardNav').css({"display": "block"})
         localStorage.setItem("keyboard-nav", true)
+        $("#content").find("*").each(function(key, value){
+            $(this).on("focus", function(){
+                $(this).css({"border": "7px dashed red"})
+            })
+            $(this).on("focusout", function(){
+                $(this).removeAttr( 'style' );
+            })
+        })
     }else{
         $('#check-keyboardNav').css({"display": "none"})
         localStorage.removeItem("keyboard-nav")
+        $("#content").find("*").each(function(key, value){
+            $(this).on("focus", function(){
+                $(this).removeAttr( 'style' );
+            })
+            $(this).on("focusout", function(){
+                $(this).removeAttr( 'style' );
+            })
+        })
     }
 }
 
 function textUnderline(){
-    for(const a of document.querySelectorAll("a")){
-        if(isUnderline){
-            $('#check-underline').css({"display": "block"})
-            localStorage.setItem("text-underline", true)
-            a.style.textDecoration = "underline"
-        }else{
-            $('#check-underline').css({"display": "none"})
-            localStorage.removeItem("text-underline")
-            a.style.textDecoration = "unset"
-        }
+    if(isUnderline){
+        $('#check-underline').css({"display": "block"})
+        localStorage.setItem("text-underline", true)
+        $("#content").find("a").each(function(){
+            $(this).css({"text-decoration": "underline"})
+        })
+    }else{
+        $('#check-underline').css({"display": "none"})
+        localStorage.removeItem("text-underline")
+        $("#content").find("a").each(function(){
+            $(this).css({"text-decoration": "unset"})
+        })
     }
 }
 
@@ -134,14 +161,14 @@ function biggerText(){
             $("#biggerText-result").append("<li></li>")
         }
         localStorage.setItem("bigger-text", isBiggerText)
-        for(const value of document.querySelectorAll("body *")){
-          value.style.fontSize = `calc(${window.getComputedStyle(value, null).getPropertyValue('font-size')} + ${isBiggerText}px)`
-        }
+        $("#content").find("*").each(function(key, value){
+            $(this).css({"font-size": `calc(${window.getComputedStyle(value, null).getPropertyValue('font-size')} + ${isBiggerText}px)`})
+        })
     }else{
         localStorage.removeItem("bigger-text")
-        for(const value of document.querySelectorAll("body *")){
-            value.style.fontSize = ""
-        }    
+        $("#content").find("*").each(function(){
+            $(this).css({"font-size": ""})
+        })
     }
 }
 
@@ -152,13 +179,13 @@ function lightSpacing(){
     }
     if(isLightSpacing > 0){
         localStorage.setItem("light-spacing", isLightSpacing)
-        for(const value of document.querySelectorAll("body *")){
-            value.style.letterSpacing = isLightSpacing+"px"
-        }
+        $("#content").find("*").each(function(key, value){
+            $(this).css({"letter-spacing": `${isLightSpacing}px`})
+        })
     }else{
         localStorage.removeItem("light-spacing")
-        for(const value of document.querySelectorAll("body *")){
-            value.style.letterSpacing = "0px"
-        }    
+        $("#content").find('*').each(function(){
+            $(this).css({"letter-spacing": "0px"})
+        })   
     }
 }

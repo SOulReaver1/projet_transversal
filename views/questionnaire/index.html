@@ -13,70 +13,64 @@
     <link rel="stylesheet" href="./assets/css/setColor.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/api.js"></script>
+    <script src="/views/questionnaire/assets/js/script.js"></script>
+    <script src="/views/questionnaire/assets/js/api.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>   
+    <script src="/views/assets/js/config.js"></script>
     <title>Formulaire de test | Emprunte carbone</title>
 </head>
 
 <body>
-    <header id="desktopMenu">
-        <div class="logo"></div>
-        <ul class="main-menu">
-            <li class="menu-txt"><a href="index.html">Test ton emprunte carbone</a>
-                <span class="animate animate-menu"></span>
-            </li>
-            <li class="menu-txt">
-                <a href="#">Contact</a>
-                <span class="animate animate-menu"></span>
-            </li>
-        </ul>
-    </header>
-    <div class="title">
-        <button class="back-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"  fill="#DA657F"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
-            Retour
-        </button>
-        <h1>Quel type de pollueur êtes-vous ?</h1>
+    <div data-include="menuAccessibilite"></div>
+    <div id="content">
+        <div class="title">
+            <button class="back-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"  fill="#DA657F"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
+                Retour
+            </button>
+            <h1>Quel type de pollueur êtes-vous ?</h1>
+        </div>
+        <form action="treatment.php" method="post" class="formulaire-test">
+            <ul class="type" id="1">
+                <h1>En faisant ce test, vous êtes ?</h1>
+                <li>
+                    <input type="radio" class="check --particulier" name="type" value="Particulier">
+                    <input type="radio" class="check --entreprise" name="type" value="Entreprise">
+                </li>
+                <p>Évaluez en quelques clics les émissions de gaz à effet de serre liées à votre consommation en étant un particulier ou une entreprise.</p>
+            </ul>
+            <ul class="surface" id="2">
+                <h1>Quel est la surface de votre logement / établissement ?</h1>
+                <li>
+                    <input type="radio" name="surface" class="check --mesure --moins50" value="Moins de 50m2">
+                    <input type="radio" name="surface" class="check --mesure --entre50100" value="Entre 50m2 et 100m2">
+                    <input type="radio" name="surface" class="check --mesure --plus100" value="Plus de 100m2">
+                </li>
+                <p>Le saviez-vous ? La superficie de votre établissement influ énormément sur l'émission de gaz à effet de serre liée à votre consommation !</p>
+            </ul>
+            <ul class="chauffage" id="3">
+                <h1>Quel est votre principal type d'énergie utilisé ?</h1>
+                <li>
+                    <input type="radio" class="check --gaz" name="chauffage" value="Gaz">
+                    <input type="radio" class="check --electricite" name="chauffage" value="Electricité">
+                    <input type="radio" class="check --fioul" name="chauffage" value="Fioul">
+                    <input type="radio" class="check --autre" name="chauffage" value="Autre"></input>
+                </li>
+                <p>Le saviez-vous ? En fonction de votre type d'énergie utilisé, votre émission de gaz à effet de serre peut fortement augmenter !</p>
+            </ul>
+            <ul class="informations" id="4">
+                <h1>Faisons connaissance !</h1>
+                <div class="group">
+                    <input type="text" required="required" name="email" id="mail"/>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Email</label>
+                </div>
+            </ul>
+            <button class="button button1" id="button">Valider</button>
+        </form>
     </div>
-    <form action="treatment.php" method="post" class="formulaire-test">
-        <ul class="type" id="1">
-            <h1>En faisant ce test, vous êtes ?</h1>
-            <li>
-                <input type="radio" class="check --particulier" name="type" value="Particulier">
-                <input type="radio" class="check --entreprise" name="type" value="Entreprise">
-            </li>
-            <p>Évaluez en quelques clics les émissions de gaz à effet de serre liées à votre consommation en étant un particulier ou une entreprise.</p>
-        </ul>
-        <ul class="surface" id="2">
-            <h1>Quel est la surface de votre logement / établissement ?</h1>
-            <li>
-                <input type="radio" name="surface" class="check --mesure --moins50" value="Moins de 50m2">
-                <input type="radio" name="surface" class="check --mesure --entre50100" value="Entre 50m2 et 100m2">
-                <input type="radio" name="surface" class="check --mesure --plus100" value="Plus de 100m2">
-            </li>
-            <p>Le saviez-vous ? La superficie de votre établissement influ énormément sur l'émission de gaz à effet de serre liée à votre consommation !</p>
-        </ul>
-        <ul class="chauffage" id="3">
-            <h1>Quel est votre principal type d'énergie utilisé ?</h1>
-            <li>
-                <input type="radio" class="check --gaz" name="chauffage" value="Gaz">
-                <input type="radio" class="check --electricite" name="chauffage" value="Electricité">
-                <input type="radio" class="check --fioul" name="chauffage" value="Fioul">
-                <input type="radio" class="check --autre" name="chauffage" value="Autre"></input>
-            </li>
-            <p>Le saviez-vous ? En fonction de votre type d'énergie utilisé, votre émission de gaz à effet de serre peut fortement augmenter !</p>
-        </ul>
-        <ul class="informations" id="4">
-            <h1>Faisons connaissance !</h1>
-            <div class="group">
-                <input type="text" required="required" name="email" id="mail"/>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <label>Email</label>
-            </div>
-        </ul>
-        <button class="button button1" id="button">Valider</button>
-    </form>
+    
     <footer>
         <ul class="footer-list">
             <li>
