@@ -17,9 +17,15 @@ time, mark, audio, video {
 	border: 0;
 	font-family: 'Poppins';
 }
-*{
-	box-sizing: border-box;
-}
+
 ol, ul {
 	list-style: none;
+}
+
+html {
+	height: 100%;
+}
+body {
+	min-height: 100%;
+	background: #325FB5
 }

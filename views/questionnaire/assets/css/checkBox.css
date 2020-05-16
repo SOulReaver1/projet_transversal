@@ -7,29 +7,24 @@
     position: relative;
     width: 200px;
     height: 200px;
-    border: 3px solid black;
-    background-color: white;
-    border-radius: 7px;
+    background-color: #325FB5;
+    border-radius: 10px;
     font-weight: bold;
     font-size: 20px;
     transition: 300ms;
     text-align: center;
     margin: 30px;
     cursor: pointer;
-    vertical-align: middle;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-}
-.check:hover{
-    border: 3px solid rgb(128, 126, 126);
+    color: white;
 }
 .check:checked{
-    background-image: url(../img/checked.png);
+    background-image: url(/views/questionnaire/assets/img/checked.svg);
     background-size: 15%;
-    background-position: 10px 10px;
+    background-position: bottom 15px center;
     background-repeat: no-repeat;
-    border: 3px solid #6ac259;
+    border: 7px solid #C53050;
+    background-color: white;
+    color: black;
 }
 input[type="text"] {
   background: none;
@@ -90,45 +85,31 @@ label {
     transition: 300ms ease all;
   }
 /*setup*/
-.--particulier::before{
-    content: url("https://img.icons8.com/dotty/80/000000/businessman.png");
-}
+
 .--particulier::after{
     content: "Particulier";
 }
-.--entreprise::before{
-    content: url("https://img.icons8.com/dotty/80/000000/conference-call.png");
-}
+
 .--entreprise::after{
     content: "Entreprise";
 }
-.--gaz::before{
-    content: url("https://img.icons8.com/ios/80/000000/gas.png");
-}
+
 .--gaz::after{
     content: "Gaz";
 }
-.--electricite::before{
-    content: url("https://img.icons8.com/ios/80/000000/lightning-bolt.png");
-}
+
 .--electricite::after{
     content: "Electricité";
 }
-.--fioul::before{
-    content: url("https://img.icons8.com/ios/80/000000/oil-industry.png");
-}
+
 .--fioul::after{
     content: "Fioul";
 }
-.--autre::before{
-    content: url("https://img.icons8.com/ios/80/000000/add.png");
-}
+
 .--autre::after{
     content: "Autre";
 }
-.--mesure::before{
-    content: url("https://img.icons8.com/carbon-copy/80/000000/tape-measure.png");
-}
+
 .--moins50::after{
     content: "Moins de 50m2";
 }

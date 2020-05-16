@@ -1,11 +1,12 @@
 .back-btn{
   border: none;
-  color: black;
+  color: white;
+  font-weight: bold;
   padding: 16px;
   margin-left: 30px;
   text-align: left;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1.3rem;
   background: none;
   transition-duration: 0.4s;
   cursor: pointer;
@@ -27,6 +28,7 @@
   cursor: pointer;
   margin: 10px auto;
   background: none;
+  outline: none;
 }
 .button2 {
   width: 20%;
@@ -38,6 +40,45 @@
 .button2:hover {
   background-color: #555;
 }
-.button1:hover{
-  border: 3px solid rgb(128, 126, 126);
+.button1{
+  border: 3px solid #C53050 ;
+  border-radius: 30px;
+  color: #C53050;
+}
+.formulaire-test{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  background-image: url(/views/questionnaire/assets/img/Tracé.svg); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 78vh;
+  padding: 100px 0;
+}
+.formulaire-test ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.formulaire-test ul li{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.title{
+  margin: 30px 0;
+}
+.title h1{
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  font-weight: bold;
 }

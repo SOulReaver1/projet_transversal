@@ -20,7 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: blue;
+    background: #325FB5;
     padding: 13px;
     color: white;
     border-top-left-radius: 8px;
@@ -71,9 +71,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    margin: 30px;
-    font-size: 4rem;
-    color: orange;
+    margin: 30px 10px;
     cursor: pointer;
 }
 .accessibilityClose{
@@ -94,7 +92,7 @@
 .result-accessibility>li{
     margin: 0 2px;
     width: calc(100%/4);
-    background: blue;
+    background: #325FB5;
     height: 7px;
 }
 .reset{
@@ -103,3 +101,15 @@
 .focus{
     border: 7px dashed red;
 }
+
+@media screen and (max-width: 1024px) {
+    .accessibilityLogo{
+        margin: 100px 10px;
+    }
+}
+@media screen and (max-width: 479px) {
+    .accessibilityLogo{
+        margin: 0;
+    }
+}
+
