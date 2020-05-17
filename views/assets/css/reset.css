@@ -22,10 +22,7 @@ ol, ul {
 	list-style: none;
 }
 
-html {
-	height: 100%;
-}
 body {
-	min-height: 100%;
-	background: #325FB5
+	background: #325FB5;
+	min-height: 100vh;
 }

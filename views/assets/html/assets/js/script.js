@@ -6,7 +6,7 @@ let isContrast = localStorage.getItem("more-contrast") || 0;
 let isReadPage = localStorage.getItem("read-page") || false;
 
     let bool = false
-    $(".accessibilityLogo").click(function(){
+    $(".accessibilityLogo").on("click", function(){
         bool = !bool
         if(bool == true){
             $(".accessibilityMenu").css({"display": "flex"})

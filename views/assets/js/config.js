@@ -6,5 +6,4 @@ window.addEventListener("DOMContentLoaded", () =>{
         $(this).load(file);
         });
     });
-    
 })

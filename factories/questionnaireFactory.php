@@ -15,7 +15,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/factories/abstractedFactory.php";
                     echo 'Exception reçue : ',  $e->getMessage(), "\n";
             }
         }
-        
+
         function allAnswers($id){
             try{
                 $q = "SELECT answerquestions.name, answerquestions.points

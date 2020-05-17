@@ -5,26 +5,31 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     background-color: #325FB5;
     border-radius: 10px;
     font-weight: bold;
     font-size: 20px;
     transition: 300ms;
     text-align: center;
-    margin: 30px;
+    margin: 10px auto;
     cursor: pointer;
     color: white;
+    user-select: none;
 }
-.check:checked{
-    background-image: url(/views/questionnaire/assets/img/checked.svg);
-    background-size: 15%;
-    background-position: bottom 15px center;
-    background-repeat: no-repeat;
-    border: 7px solid #C53050;
-    background-color: white;
-    color: black;
+.checked{
+  background-image: url(/views/questionnaire/assets/img/checked.svg);
+  background-size: 15%;
+  background-position: bottom 15px center;
+  background-repeat: no-repeat;
+  border: 7px solid #C53050;
+  background-color: white;
+  color: black;
+}
+
+.inputcheck{
+  display: none;
 }
 input[type="text"] {
   background: none;
@@ -84,38 +89,3 @@ label {
     -webkit-transition: 300ms ease all;
     transition: 300ms ease all;
   }
-/*setup*/
-
-.--particulier::after{
-    content: "Particulier";
-}
-
-.--entreprise::after{
-    content: "Entreprise";
-}
-
-.--gaz::after{
-    content: "Gaz";
-}
-
-.--electricite::after{
-    content: "Electricité";
-}
-
-.--fioul::after{
-    content: "Fioul";
-}
-
-.--autre::after{
-    content: "Autre";
-}
-
-.--moins50::after{
-    content: "Moins de 50m2";
-}
-.--entre50100::after{
-    content: "Entre 50m2 et 100m2";
-}
-.--plus100::after{
-    content: "Plus de 100m2";
-}

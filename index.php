@@ -27,6 +27,8 @@ if($controller == "main"){
   require_once $_SERVER['DOCUMENT_ROOT']."/controllers/mainController.php";
 }else if($controller == "admin"){
   require_once $_SERVER['DOCUMENT_ROOT']."/controllers/admin/adminController.php";
+}else if($controller == "questionnaire"){
+  require_once $_SERVER['DOCUMENT_ROOT']."/controllers/questionnaireController.php";
 }
 else{
   require_once $_SERVER['DOCUMENT_ROOT']."/controllers/404Controller.php";
