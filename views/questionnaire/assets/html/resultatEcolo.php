@@ -79,11 +79,11 @@
                 </div>
             </form>
         </div>
-        <img src="../views/questionnaire/assets/html/assets/img/leftAlgue" alt="" class="leftAlgue">
-        <img src="../views/questionnaire/assets/html/assets/img/rightAlgue" alt="" class="rightAlgue">
-        
         <footer data-include="footer"></footer>
-
+        <div class="algues">
+            <img src="../views/questionnaire/assets/html/assets/img/rightAlgue" alt="" class="leftAlgue">
+            <img src="../views/questionnaire/assets/html/assets/img/leftAlgue" alt="" class="rightAlgue">
+        </div>
     </div>
 </body>
 </html>

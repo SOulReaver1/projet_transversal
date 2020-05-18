@@ -9,7 +9,7 @@
     position: relative;
     overflow-x: hidden;
 }
-#content>div{
+#content>div:not(.algues){
     margin: 150px auto;
 }
 .ecoloDesc{
@@ -155,15 +155,25 @@
     border-bottom-right-radius: none;
     color: white;
 }
+.algues{
+    position: absolute;
+    height: 200vh;
+    width: 100vw;
+    bottom: 0;
+    overflow: hidden;
+    z-index: -99999999;
+    
+}
 .leftAlgue{
     position: absolute;
     right: -20px;
-    bottom: 0px;
+    bottom: -161px;
 }
 .rightAlgue{
     position: absolute;
     left: -20px;
-    bottom: 0px;
+    bottom: -82px;
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -179,6 +189,12 @@
     }
     #fish1{
         display: none;
+    }
+    .rightAlgue{
+        display: none;
+    }
+    .leftAlgue{
+        right: -70px;
     }
 }
 
