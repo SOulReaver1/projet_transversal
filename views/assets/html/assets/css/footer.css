@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white
+}
+footer>h1>span{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+footer>ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0;
+}
+footer>ul>li{
+    margin: 15px;
+}

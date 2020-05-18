@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/views/assets/css/reset.css">
     <link rel="stylesheet" href="/views/questionnaire/assets/css/style.css">
     <link rel="stylesheet" href="/views/questionnaire/assets/css/checkBox.css">
-    <link rel="stylesheet" href="/views/questionnaire/assets/css/setColor.css">
+    <link rel="stylesheet" href="/views/assets/css/setColor.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/views/questionnaire/assets/js/script.js"></script>
     <script src="/views/assets/js/config.js"></script>
@@ -30,9 +30,9 @@
             </button>
             <h1>Quel type de pollueur êtes-vous ?</h1>
         </div>
-        <form action="" class="form-carbone">
+        <form action="/questionnaire/doTheTest" class="form-carbone">
             <?php foreach ($allQuestions as $key => $value):?>    
-                <ul id="question<?php echo $key+1;?>">
+                <ul id="question<?php echo $key+1;?>" class="ulquestion">
 
                     <li>
                         <h1>Question <?php echo $key+1;?></h1>                    
