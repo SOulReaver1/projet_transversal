@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/views/assets/css/setColor.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/views/assets/js/config.js"></script>
-    <title>Document</title>
+    <title>Votre résultat écolo !</title>
 </head>
 <body>
     <header data-include="header" class="header"></header>
