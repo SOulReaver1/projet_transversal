@@ -15,20 +15,11 @@
     <header data-include="header" class="header"></header>
     <div data-include="menuAccessibilite"></div>
     <div id="content">
-        <h1 class="first-title">Tu es... un écolo !</h1>
+        <h1 class="first-title">Tu es... <?php echo $getProfil[0]->resultStatus;?> !</h1>
         <div class="ecoloDesc">
             <img src="../views/questionnaire/assets/html/assets/img/PNJ.png" alt="">
             <p>
-                Comme XX% des gens qui ont répondu à ce questionnaire, tu es l’Ecolo par excellence qui se soucie de son mode de consommation.
-                <br>
-                <br>
-                Tu es une personne respectueuse de l’environnement, et tu fais en sorte de préserver la nature pour les générations futures.
-                <br>
-                <br>
-                Tu l’as bien compris et ce depuis des années, qu'adopter des gestes écologiques permettrait au monde qui t’entoure d’aller de l’avant.
-                <br>
-                <br>
-                Félicitations ! Continue sur cette voie.
+                <?php echo $getProfil[0]->resultDesc;?>
             </p>
         </div>
         <button type="button" id="shareYouResult" class="button button-share">
@@ -48,10 +39,15 @@
         </button>
         <div class="profil">
             <div class="profilDesc">
-                <h2>Tu es de profil comme :</h2>
-                <h1>Nicolas</h1>
-                <p>Il est un grand écologiste reconnu de tous. Il constate à l’œil nu les dégradations que l’on fait subir à la planète et l’urgence d’agir. Il crée donc en 1990 la Fondation Nicolas Hulot pour la Nature et l’Homme, reconnue d’utilité publique !
-                Wow génial !</p>
+                <h2>
+                    Tu es de profil comme :
+                </h2>
+                <h1>
+                    <?php echo $getProfil[0]->profilName;?>
+                </h1>
+                <p>
+                    <?php echo $getProfil[0]->profilDesc;?>
+                </p>
             </div>
             <img src="../views/questionnaire/assets/html/assets/img/PNJ2.png" alt="">
         </div>
@@ -59,8 +55,11 @@
             <div class="bull">
                 <h1>Comment s'améliorer ?</h1>
                 <ul class="ourConseilsList">
-                    <li>Faire passer le message sur les actions menées afin de sensibiliser ses proches</li>
-                    <li>Sensibiliser ses enfants</li>
+                    <?php foreach ($getConseils as $key => $value):?>
+                        <li>
+                            <?php echo $value->conseil;?>
+                        </li>
+                    <?php endforeach;?>
                 </ul>
                 <img src="/views/questionnaire/assets/html/assets/img/fish.png" alt="" id="fish1">
                 <img src="/views/questionnaire/assets/html/assets/img/fish2.png" alt="" id="fish2">

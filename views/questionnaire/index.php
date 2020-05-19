@@ -30,7 +30,7 @@
             </button>
             <h1>Quel type de pollueur êtes-vous ?</h1>
         </div>
-        <form action="/questionnaire/doTheTest" class="form-carbone">
+        <form action="/questionnaire/resultat-ecolo" method="post" class="form-carbone">
             <?php foreach ($allQuestions as $key => $value):?>    
                 <ul id="question<?php echo $key+1;?>" class="ulquestion">
 
@@ -41,9 +41,8 @@
                     </li>
 
                     <li>
-                        <?php foreach ($questions->allAnswers($value->id) as $k => $question):?>
-
-                            <input type="radio" name="answer<?php echo $value->id;?>" value="<?php echo $question->name;?>" id="answer<?php echo $value->id.$k+1;?>" class="inputcheck">
+                        <?php foreach ($questions->allAnswersOfQuestions($value->id) as $k => $question):?>
+                            <input type="radio" name="<?php echo $question->id;?>" value="<?php echo $question->name;?>" id="answer<?php echo $value->id.$k+1;?>" class="inputcheck">
 
                             <label for="answer<?php echo $value->id.$k+1;?>" class="check">
 

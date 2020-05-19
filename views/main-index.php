@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Seul le panel admin est dispo :</h1>
+    <h1>Panel admin est dispo :</h1>
     <a href="/admin">Cliquez ici</a>
+    <h1>Questionnaire fonctionnel :</h1>
+    <a href="/questionnaire">Cliquez ici</a>
 </body>
 </html>

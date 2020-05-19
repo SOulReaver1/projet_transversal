@@ -14,14 +14,20 @@ $( document ).ready(function() {
             }
         })
         $(this).find(".check").each(function(k, label){
-            
+            let nextUl = ul.nextElementSibling
             $(this).on("click", function(){
                 $(this).parent().children("label").removeClass("checked")
                 $(this).addClass("checked")
                 $("#buttonForm").one("click", function(e){
-                    
-                    ul.style.display = "none"
-                    ul.nextElementSibling.style.display = "block"
+                    if(nextUl.id !== "buttonForm"){
+                        ul.style.display = "none"
+                        ul.nextElementSibling.style.display = "block"
+                    }else{
+                        $('#buttonForm').attr("type", "submit")                        
+                    }
+                    if(nextUl.nextElementSibling.id == "buttonForm"){
+                        $("#buttonForm").text("Valider le formulaire")
+                    }
                 })
             })
         

@@ -16,9 +16,9 @@ require_once $_SERVER['DOCUMENT_ROOT']."/factories/abstractedFactory.php";
             }
         }
 
-        function allAnswers($id){
+        function allAnswersOfQuestions($id){
             try{
-                $q = "SELECT answerquestions.name, answerquestions.points
+                $q = "SELECT answerquestions.id, answerquestions.name, answerquestions.points
                 FROM questions
                 INNER JOIN answerquestions ON answerquestions.id_question = questions.id
                 WHERE questions.id = :id";
@@ -30,6 +30,45 @@ require_once $_SERVER['DOCUMENT_ROOT']."/factories/abstractedFactory.php";
             }
         }
 
+        function allAnswers($id){
+            try{
+                $q = "SELECT name, points
+                FROM answerquestions
+                WHERE id = :id";
+                $stmt = $this->pdo->prepare($q);
+                $stmt->execute([":id" => $id]);
+                return $stmt->fetchAll(PDO::FETCH_CLASS);
+            }catch (Exception $e) {
+                    echo 'Exception reçue : ',  $e->getMessage(), "\n";
+            }
+        }
+
+        function getProfil($profil){
+            try{
+                $q = "SELECT resultatecolo.name AS nameResult, resultatecolo.status AS resultStatus, resultatecolo.description AS resultDesc, resultatecoloprofil.name AS profilName, resultatecoloprofil.description AS profilDesc
+                FROM resultatecolo
+                INNER JOIN resultatecoloprofil ON resultatecoloprofil.id_result = resultatecolo.id
+                WHERE resultatecolo.id = :profil";
+                $stmt = $this->pdo->prepare($q);
+                $stmt->execute([":profil" => $profil]);
+                return $stmt->fetchAll(PDO::FETCH_CLASS);
+            }catch (Exception $e) {
+                    echo 'Exception reçue : ',  $e->getMessage(), "\n";
+            }
+        }
+
+        function getConseils($profil){
+            try{
+                $q = "SELECT *
+                FROM resultatecoloconseils
+                WHERE id_result = :profil";
+                $stmt = $this->pdo->prepare($q);
+                $stmt->execute([":profil" => $profil]);
+                return $stmt->fetchAll(PDO::FETCH_CLASS);
+            }catch (Exception $e) {
+                    echo 'Exception reçue : ',  $e->getMessage(), "\n";
+            }
+        }
         function deleteQuestion($id){
             try{
                 $q = "DELETE questions, answerquestions

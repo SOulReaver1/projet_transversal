@@ -86,6 +86,7 @@
 }
 .ourConseilsList>li{
     margin: 10px 0;
+    max-width: 90vmin;
 }
 .ourConseilsList>li::before{
     content: "•";
