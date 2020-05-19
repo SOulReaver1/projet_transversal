@@ -11,17 +11,17 @@ if($action == "resultat-ecolo" && $_POST){
         }
     }
     if($totalPoints <= 15){
-        $getProfil = $questions->getProfil(1);
-        $getConseils = $questions->getConseils(1);
-    }else if($totalPoints <= 30 && $totalPoints > 15){
-        $getProfil = $questions->getProfil(2);
-        $getConseils = $questions->getConseils(2);
-    }else if($totalPoints <= 45 && $totalPoints > 30){
-        $getProfil = $questions->getProfil(3);
-        $getConseils = $questions->getConseils(3);
-    }else if($totalPoints <= 60 && $totalPoints > 45){
         $getProfil = $questions->getProfil(4);
         $getConseils = $questions->getConseils(4);
+    }else if($totalPoints <= 30 && $totalPoints > 15){
+        $getProfil = $questions->getProfil(3);
+        $getConseils = $questions->getConseils(3);
+    }else if($totalPoints <= 45 && $totalPoints > 30){
+        $getProfil = $questions->getProfil(2);
+        $getConseils = $questions->getConseils(2);
+    }else if($totalPoints <= 60 && $totalPoints > 45){
+        $getProfil = $questions->getProfil(1);
+        $getConseils = $questions->getConseils(1);
         
     }
 
