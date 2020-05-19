@@ -90,7 +90,7 @@
             <div id="collapse<?php echo $key;?>" class="collapse" aria-labelledby="heading<?php echo $key;?>" data-parent="#accordion">
                 <div class="card-body"> 
                   <ul class="list-group">
-                    <?php foreach($questions->allAnswers($value->id) as $question):?>
+                    <?php foreach($questions->allAnswersOfQuestions($value->id) as $question):?>
                       <li class="list-group-item"><?php echo $question->name;?></li>
                     <?php endforeach;?>
                   </ul>

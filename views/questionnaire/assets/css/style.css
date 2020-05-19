@@ -91,7 +91,7 @@ body{
 @media screen and (max-width: 1024px) {
     .form-carbone{
         background-image: url(/views/questionnaire/assets/img/Tracé\ 236.svg);
-        min-height: 100vh;
+        padding: 130px 0;
     }
     .algues{
         display: none;
