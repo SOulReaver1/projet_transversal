@@ -57,5 +57,6 @@
             <button type="button" class="button button1" id="buttonForm">Suivant</button>
         </form>
     </div>
+    <footer data-include="footer"></footer>
 </body>
 </html>

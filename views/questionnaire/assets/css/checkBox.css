@@ -17,6 +17,7 @@
     cursor: pointer;
     color: white;
     user-select: none;
+    box-sizing: border-box;
 }
 .checked{
   background-image: url(/views/questionnaire/assets/img/checked.svg);

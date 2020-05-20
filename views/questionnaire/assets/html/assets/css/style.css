@@ -163,7 +163,7 @@
     bottom: 0;
     overflow: hidden;
     z-index: -99999999;
-    
+    pointer-events: none;
 }
 .leftAlgue{
     position: absolute;
