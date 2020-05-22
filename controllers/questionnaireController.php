@@ -22,9 +22,7 @@ if($action == "resultat-ecolo" && $_POST){
     }else if($totalPoints <= 60 && $totalPoints > 45){
         $getProfil = $questions->getProfil(1);
         $getConseils = $questions->getConseils(1);
-        
     }
-
     require_once $_SERVER['DOCUMENT_ROOT'].'/views/questionnaire/assets/html/resultatEcolo.php';
 }else{
     require_once $_SERVER['DOCUMENT_ROOT'].'/views/questionnaire/index.php';

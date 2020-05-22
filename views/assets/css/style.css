@@ -7,10 +7,11 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    z-index: -2;
+    min-height: 52em;
 }
 .body1{
     justify-content: center;
-    min-height: calc(100vh - 140px);
 }
 .sacPlastique{
     position: absolute;
@@ -18,7 +19,7 @@
 }
 .sacPlastiquesParent{
     position: relative;
-    height: 20vh;
+    height: 10em;
     width: 100%;
 }
 .sacPlastique2{
@@ -45,13 +46,13 @@
 .titleFirst{
     position: relative;
     margin: auto;
-    max-width: 90vmin;
 }
 .firstTitle{
     color: white;
     text-transform: uppercase;
     font-size: 4rem;
     text-align: center;
+    z-index: 9999999999;
 }
 .scrollToDiscover{
     position: relative;
@@ -63,15 +64,16 @@
 }
 .fish1, .goblet{
     position: absolute;
-    width: 170px;
+    width: 12%;
+    z-index: -1;
 }
 .fish1{
-    bottom: 300px;
     left: 4%;
+    bottom: 35%;
 }
 .goblet{
-    bottom: 170px;
-    left: 19%;
+    left: 18%;
+    bottom: 24%;
 }
 .sardines{
     position: absolute;
@@ -81,7 +83,7 @@
 .body2List{
     position: relative;
     margin: 0 auto;
-    width: 90vmin;
+    width: 70%;
     color: white;
     padding-bottom: 100px;
 }
