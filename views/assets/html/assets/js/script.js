@@ -116,7 +116,7 @@ function keyboardNav(){
     if(navKeyboard){
         $('#check-keyboardNav').css({"display": "block"})
         localStorage.setItem("keyboard-nav", true)
-        $("#content").find("*").each(function(key, value){
+        $("body").find("*").each(function(key, value){
             $(this).on("focus", function(){
                 $(this).css({"border": "7px dashed red"})
             })
@@ -127,14 +127,6 @@ function keyboardNav(){
     }else{
         $('#check-keyboardNav').css({"display": "none"})
         localStorage.removeItem("keyboard-nav")
-        $("#content").find("*").each(function(key, value){
-            $(this).on("focus", function(){
-                $(this).removeAttr( 'style' );
-            })
-            $(this).on("focusout", function(){
-                $(this).removeAttr( 'style' );
-            })
-        })
     }
 }
 

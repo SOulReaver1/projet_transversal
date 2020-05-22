@@ -1,0 +1,310 @@
+#content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.body{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.body1{
+    justify-content: center;
+    min-height: calc(100vh - 140px);
+}
+.sacPlastique{
+    position: absolute;
+    margin: 0 50px;
+}
+.sacPlastiquesParent{
+    position: relative;
+    height: 20vh;
+    width: 100%;
+}
+.sacPlastique2{
+    right: 0;
+}
+.sacPlastiquesParent>p{
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+.sacplastiquetext1{
+    bottom: 50px;
+    left: 165px;
+}
+.sacplastiquetext2{
+    bottom: 116px;
+    right: 194px;
+}
+.white{
+    color: white;
+}
+.titleFirst{
+    position: relative;
+    margin: auto;
+    max-width: 90vmin;
+}
+.firstTitle{
+    color: white;
+    text-transform: uppercase;
+    font-size: 4rem;
+    text-align: center;
+}
+.scrollToDiscover{
+    position: relative;
+    text-transform: uppercase;
+    color: white;
+    margin: auto;
+    font-size: 3rem;
+    text-align: center;
+}
+.fish1, .goblet{
+    position: absolute;
+    width: 170px;
+}
+.fish1{
+    bottom: 300px;
+    left: 4%;
+}
+.goblet{
+    bottom: 170px;
+    left: 19%;
+}
+.sardines{
+    position: absolute;
+    top: -100px;
+    right: 0;
+}
+.body2List{
+    position: relative;
+    margin: 0 auto;
+    width: 90vmin;
+    color: white;
+    padding-bottom: 100px;
+}
+.round::before{
+    content: "•";
+    color: #F09990;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+}
+.body2List>li{
+    display: flex;
+}
+.body2List>li>*{
+    margin: 0 10px;
+}
+.body2List>li>div{
+    display: flex;
+}
+.fish3, .fish4, .jerrycan{
+    position: absolute;
+}
+.fish3{
+    left: 25%;
+    bottom: 13px;
+}
+.fish4{
+    top: 50px;
+    left: 20px;
+}
+.jerrycan{
+    bottom: -70px;
+    right: -131px;
+}
+.body3{
+    position: relative;
+    width: 80%;
+    margin: 100px auto;
+    color: white;
+}
+.body3>*{
+    margin: 15px 0;
+}
+.body3Carre{
+    width: 100%;
+    height: 600px;
+    background: #1B1F47;
+}
+.body3List{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+.body3List::before{
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 23px;
+    width: 100%;
+    height: 3px;
+    background: rgba(119, 136, 153, 0.459);
+}
+.body3Arrow{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 53px;
+    right: -9px;
+    height: 3px;
+    font-size: 2.2rem;
+    color: rgba(119, 136, 153, 0.459);
+}
+.body3List>li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99999999999;
+}
+.arrow-down{
+    position: relative;
+    margin: 15px auto;
+    font-size: 3rem;
+}
+.dropdown{
+    display: none;
+}
+.dropdownTitle{
+    text-transform: uppercase;
+}
+.btn-ala{
+    background: none;
+    border: 3px solid white;
+    color: white;
+}
+.btn-ala:hover{
+    color: white;
+}
+.lastBody{
+    padding: 60px 0;
+    color: white;
+}
+.lastBody>*{
+    margin: 30px 0;
+}
+.btn-test{
+    width: 200px;
+    border-radius: 30px;
+}
+.algues{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    overflow: hidden;
+    z-index: -99999999;
+    pointer-events: none;
+}
+.leftAlgue{
+    position: absolute;
+    right: -20px;
+    bottom: -161px;
+}
+.rightAlgue{
+    position: absolute;
+    left: -20px;
+    bottom: -82px;
+}
+.sable{
+    position: absolute;
+    bottom: 0;
+    width: 107em;
+    z-index: -99999999999;
+}
+.footer>*{
+    color: black;
+}
+.footer{
+    margin-top: 330px;
+}
+@media screen and (max-width: 1024px) {
+    .sacPlastiquesParent{
+        display: none;
+    }
+    .scrollToDiscover{
+        display: none;
+    }
+    .fish1{
+        top: 0;
+        bottom: auto;
+    }
+    .body1{
+        min-height: 60vh;
+    }
+    .fish1, .goblet{
+        width: 130px;
+    }
+    .firstTitle{
+        font-size: 3rem;
+    }
+    .goblet{
+        bottom: 30px;
+        left: 4%;
+    }
+    .fish3{
+        display: none;
+    }
+    .fish4{
+        top: 150px;
+    }
+    .jerrycan{
+        right: 0;
+        bottom: 0px;
+        width: 100px;
+    }
+    .footer{
+        z-index: 9999999999;
+    }
+    .sable{
+        width: 154em;
+    }
+    .rightAlgue{
+        left: -70px;
+    }
+    .leftAlgue{
+        display: none;
+    }
+}
+@media screen and (max-width: 427px) {
+    .fish1, .sardines{
+        display: none;
+    }
+    .goblet{
+        width: 115px;
+    }
+    .firstTitle{
+        font-size: 2rem;
+    }
+    .titleFirst{
+        margin: 0 auto;
+    }
+    .body2List{
+        padding-bottom: 200px;
+    }
+    .body2List>li{
+        flex-direction: column;
+        align-items: center;
+    }
+    .fish4{
+        top: auto;
+        bottom: 82px;
+        width: 130px;
+    }
+    .jerrycan{
+        bottom: 19px;
+        right: 30px;
+    }
+    .body3List{
+        display: none;
+    }
+    .dropdown{
+        display: flex;
+    }
+}

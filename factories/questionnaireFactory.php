@@ -45,7 +45,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/factories/abstractedFactory.php";
 
         function getProfil($profil){
             try{
-                $q = "SELECT resultatecolo.name AS nameResult, resultatecolo.status AS resultStatus, resultatecolo.description AS resultDesc, resultatecoloprofil.name AS profilName, resultatecoloprofil.description AS profilDesc
+                $q = "SELECT resultatecolo.name AS nameResult, resultatecolo.status AS resultStatus, resultatecolo.description AS resultDesc, resultatecoloprofil.name AS profilName, resultatecoloprofil.description AS profilDesc, resultatecolo.img AS resultImg, resultatecoloprofil.img AS profilImg
                 FROM resultatecolo
                 INNER JOIN resultatecoloprofil ON resultatecoloprofil.id_result = resultatecolo.id
                 WHERE resultatecolo.id = :profil";

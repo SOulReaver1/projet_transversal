@@ -15,9 +15,9 @@
     <header data-include="header" class="header"></header>
     <div data-include="menuAccessibilite"></div>
     <div id="content">
-        <h1 class="first-title">Tu es... <?php echo $getProfil[0]->resultStatus;?> !</h1>
+        <h1 class="first-title">Tu es... <?php  echo $getProfil[0]->nameResult;?> !</h1>
         <div class="ecoloDesc">
-            <img src="../views/questionnaire/assets/html/assets/img/PNJ.png" alt="">
+            <img src="<?php  echo $getProfil[0]->resultImg;?>" alt="<?php  echo $getProfil[0]->nameResult;?> ">
             <p>
                 <?php echo $getProfil[0]->resultDesc;?>
             </p>
@@ -49,7 +49,7 @@
                     <?php echo $getProfil[0]->profilDesc;?>
                 </p>
             </div>
-            <img src="../views/questionnaire/assets/html/assets/img/PNJ2.png" alt="">
+            <img src="<?php echo $getProfil[0]->profilImg;?>" alt="<?php echo $getProfil[0]->profilName?>">
         </div>
         <div class="ourConseils">
             <div class="bull">

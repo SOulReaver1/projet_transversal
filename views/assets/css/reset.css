@@ -25,4 +25,6 @@ ol, ul {
 body {
 	background: #325FB5;
 	min-height: 100vh;
+	position: relative;
+	overflow-x: hidden;
 }

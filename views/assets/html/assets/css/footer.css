@@ -1,4 +1,6 @@
 body{
+    display: flex;
+    flex-direction: column;
     margin: 0;
 }
 footer{
@@ -8,6 +10,7 @@ footer{
     justify-content: center;
     color: white;
     text-align: center;
+    margin-top: auto;
 }
 footer>h1>span{
     font-weight: bold;
@@ -24,6 +27,7 @@ footer>ul{
 }
 footer>ul>li{
     margin: 15px;
+    cursor: pointer;
 }
 @media screen and (max-width: 1024px) {
     footer>ul{

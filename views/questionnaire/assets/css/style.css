@@ -65,6 +65,7 @@ body{
     width: 400px;
     z-index: 99;
     overflow: hidden;
+    pointer-events: none;
 }
 .algue{
     position: absolute;
