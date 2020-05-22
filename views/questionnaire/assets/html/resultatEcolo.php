@@ -40,7 +40,7 @@
         <div class="profil">
             <div class="profilDesc">
                 <h2>
-                    Tu es de profil comme :
+                    Tu es de profil <?php echo $getProfil[0]->status;?> comme :
                 </h2>
                 <h1>
                     <?php echo $getProfil[0]->profilName;?>
