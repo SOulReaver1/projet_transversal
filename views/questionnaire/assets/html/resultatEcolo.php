@@ -40,7 +40,7 @@
         <div class="profil">
             <div class="profilDesc">
                 <h2>
-                    Tu es de profil <?php echo $getProfil[0]->status;?> comme :
+                    Tu es de profil <span><?php echo $getProfil[0]->nameResult;?></span> comme :
                 </h2>
                 <h1>
                     <?php echo $getProfil[0]->profilName;?>
@@ -71,8 +71,8 @@
                 Entre ton adresse pour recevoir ta promotion. Pas d'inquiétude, ton adresse mail ne sera pas utilisée pour autre chose de façon ultérieure !
             </p>
             
-            <form class="input-group mb-3 button-newsletter" method="post" action="">
-                <input type="text" class="form-control input-newsletter" placeholder="Votre adresse ici" aria-label="Votre adresse ici" aria-describedby="button-addon2">
+            <form class="input-group mb-3 button-newsletter" method="post" action="/questionnaire/newsLetter">
+                <input type="email" class="form-control input-newsletter" placeholder="Votre adresse ici" aria-label="Votre adresse ici" aria-describedby="button-addon2" name="newsletterEmail">
                 <div class="input-group-append">
                     <button class="btn button-sendNewsletter" type="submit" id="button-addon2">Envoyer</button>
                 </div>

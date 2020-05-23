@@ -45,7 +45,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/factories/abstractedFactory.php";
 
         function getProfil($profil){
             try{
-                $q = "SELECT resultatecolo.name AS nameResult, resultatecolo.status AS resultStatus, resultatecolo.description AS resultDesc, resultatecoloprofil.name AS profilName, resultatecoloprofil.description AS profilDesc, resultatecolo.img AS resultImg, resultatecoloprofil.img AS profilImg
+                $q = "SELECT resultatecolo.name AS nameResult, resultatecolo.status AS resultStatus, resultatecolo.description AS resultDesc, resultatecoloprofil.name AS profilName, resultatecoloprofil.id AS idProfil, resultatecoloprofil.description AS profilDesc, resultatecolo.img AS resultImg, resultatecoloprofil.img AS profilImg
                 FROM resultatecolo
                 INNER JOIN resultatecoloprofil ON resultatecoloprofil.id_result = resultatecolo.id
                 WHERE resultatecolo.id = :profil";
@@ -96,6 +96,45 @@ require_once $_SERVER['DOCUMENT_ROOT']."/factories/abstractedFactory.php";
                 }
             }catch (Exception $e) {
                     echo 'Exception reçue : ',  $e->getMessage(), "\n";
+            }
+        }
+        function recordQuestion($idProfil){
+            $q = "INSERT INTO recordquestions (profil_id)
+            VALUES (:idProfil)";
+            $stmt = $this->pdo->prepare($q);
+            $stmt->execute([":idProfil" => $idProfil]);
+        }
+        function recordsCount(){
+            $q = "SELECT COUNT(*) AS num FROM recordquestions";
+            $stmt = $this->pdo->prepare($q);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        }
+        function calcTypeOfProfil(){
+            $q = "SELECT resultatecoloprofil.name, COUNT(*) * 100.0 / (SELECT COUNT(*) FROM recordquestions) AS stats, resultatecoloprofil.img AS img
+            FROM recordquestions
+            INNER JOIN resultatecoloprofil ON resultatecoloprofil.id = recordquestions.profil_id
+            GROUP BY profil_id";
+            $stmt = $this->pdo->prepare($q);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        }
+        function editQuestion($question){
+            try{
+                $q = "UPDATE questions SET name = :questionName WHERE id = :idQuestion; DELETE 
+                FROM answerquestions
+                WHERE id_question = :idQuestion;";
+                $stmt = $this->pdo->prepare($q);
+                $stmt->execute([":questionName" => $question["editQuestion"], ":idQuestion" => $question["questionId"]]);
+                $stmt->closeCursor();
+                foreach ($question["editAnswerToQuestion"] as $key => $value) {
+                    $q2 = "INSERT INTO answerquestions (id_question, name, points)
+                    VALUES (:idQuestion, :answerName, :points)";
+                    $stmt2 = $this->pdo->prepare($q2);
+                    $stmt2->execute([":idQuestion" => $question["questionId"], ":answerName" => $value, ":points" => $question["editPointsToQuestion"][$key]]);
+                }
+            }catch (Exception $e) {
+                echo 'Exception reçue : ',  $e->getMessage(), "\n";
             }
         }
     }

@@ -13,4 +13,17 @@ require_once $_SERVER['DOCUMENT_ROOT']."/factories/abstractedFactory.php";
                     echo 'Exception reçue : ',  $e->getMessage(), "\n";
             }
         }
+        function countMails(){
+            $q = "SELECT COUNT(*) AS num FROM newLetter";
+            $stmt = $this->pdo->prepare($q);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        }
+        function countMonthMails(){
+            $q = "SELECT COUNT(*) AS num FROM newLetter WHERE MONTH(created_at)=".date('n');
+            $stmt = $this->pdo->prepare($q);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        }
+
     }

@@ -9,4 +9,7 @@ if($event == "delete-question" && $_POST){
 }else if($event == "addQuestion" && $_POST){
     $addQuestion = $questions->addQuestion($_POST);
     header("Location: /admin/questionnaire");
+}else if($event == "edit" && $_POST){
+     $editQuestion = $questions->editQuestion($_POST);
+     header("Location: /admin/questionnaire");
 }

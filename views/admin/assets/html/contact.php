@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 class="my-4">Newsletter</h1>
+    <h1 class="mb-4 text-uppercase">Newsletter</h1>
 
     <ul class="list-group">
         <?php foreach($getEmail as $key => $value):?>

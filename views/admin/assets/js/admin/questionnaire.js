@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    var bool = false;
     var i = 2
     $("#addAnswerToQuestion").on("click", function(){
         i++
@@ -22,5 +23,33 @@ $(document).ready(function () {
             })
         })
     })
-    
-});
+    $(".editQuestionButton").on("click", function(){
+
+        if($(this).attr("aria-expanded") == "false"){
+          $(this).parent().parent().parent().find(".submitEditQuestion").removeClass("d-none")
+          $(this).parent().parent().parent().find(".addAnswerToEditQuestion").removeClass("d-none")
+          $(this).parent().parent().parent().find(".editAnswerToQuestion").removeClass("d-none")
+          $(this).parent().parent().parent().find(".editPointsToQuestion").removeClass("d-none")
+          $(this).parent().parent().parent().find(".editQuestion").removeClass("d-none")
+          $(this).parent().parent().parent().find(".editAnswerNormal").addClass("d-none")
+          $(this).parent().parent().parent().find(".editPointsNormal").addClass("d-none")
+          $(this).parent().parent().parent().find(".questionNormal").addClass("d-none")
+        }else{
+        editModeDisabled()
+      }
+    })
+    $(".questionToColapse").on("click", function(event){
+      editModeDisabled()
+    })
+
+    function editModeDisabled(){
+        $(".submitEditQuestion").addClass("d-none")
+        $(".addAnswerToEditQuestion").addClass("d-none")
+        $(".editPointsToQuestion").addClass("d-none")
+        $(".editAnswerToQuestion").addClass("d-none")
+        $(".editQuestion").addClass("d-none")
+        $(".editAnswerNormal").removeClass("d-none")
+        $(".editPointsNormal").removeClass("d-none")
+        $(".questionNormal").removeClass("d-none")
+    }
+}); 

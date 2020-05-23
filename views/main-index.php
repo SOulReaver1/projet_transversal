@@ -89,19 +89,37 @@
             </div>
             <i class="fas fa-long-arrow-alt-down white arrow-down"></i>
         </div>
-        <div class="lastBody body m-auto d-flex flex-column justify-content-center align-items-center">
-            <h1>Alors, et vous ?</h1>
-            <a href="/questionnaire"><button class="btn btn-ala btn-test">
+        <div class="lastBody m-auto d-flex flex-column justify-content-center align-items-center">
+            <div>
+               <h1>Alors, et vous ?</h1>
+                <a href="/questionnaire"><button class="btn btn-ala btn-test">
                 Faites le test
-            </button></a>
+                </button></a> 
+            </div>
+            <img src="/views/assets/img/fish.svg" alt="" class="sardinesBottom">
+            <img src="/views/assets/img/poulpe.svg" alt="" class="poupleBottom">
+            <img src="/views/assets/img/poissonBottom1.svg" alt="" class="poissonBottom1">
+            <img src="/views/assets/img/poissonBottom2.svg" alt=""
+            class="poissonBottom2">
+            <img src="/views/assets/img/poissonBottom3.svg" alt=""
+            class="poissonBottom3">
         </div>
         
     </div>
     <div class="algues">
-        <img src="/views/questionnaire/assets/html/assets/img/rightAlgue.png" alt="" class="leftAlgue">
-        <img src="/views/questionnaire/assets/html/assets/img/leftAlgue.png" alt="" class="rightAlgue">
+        <div class="algueLeft">
+            <img src="/views/assets/img/algues/algueLeft1.svg" alt="" class="leftAlgue">
+            <img src="/views/assets/img/algues/alguesLeft2.svg" alt="" class="leftAlgue2">
+            <img src="/views/assets/img/algues/rocherBottomLeft.svg" alt="" class="rocherLeft">
+        </div>
+        <div class="algueRight">
+            <img src="/views/assets/img/algues/alguesRight1.svg" alt="" class="rightAlgue">
+            <img src="/views/assets/img/algues/alguesRight2.svg" alt="" class="rightAlgue1">
+            <img src="/views/assets/img/algues/rocherright.svg" alt="" class="rocherRight" width="170px">
+        </div>
     </div>
-    
+    <img src="/views/assets/img/bob.svg" alt="" class="bob">
+    <img src="/views/assets/img/dechets.svg" alt="" class="dechets">
     <img src="/views/assets/img/sable.svg" alt="" class="sable">
     <footer data-include="footer" class="footer"></footer>
 </body>

@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    z-index: -2;
+    z-index: 999999999;
     min-height: 52em;
 }
 .body1{
@@ -185,15 +185,50 @@
     color: white;
 }
 .lastBody{
-    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     color: white;
+    width: 100%;
+    text-align: center;
 }
-.lastBody>*{
-    margin: 30px 0;
+.lastBody>div>*{
+    margin: 130px 0;
 }
 .btn-test{
     width: 200px;
     border-radius: 30px;
+}
+.sardinesBottom, .poupleBottom, .poissonBottom1, .poissonBottom2, .poissonBottom3, .bob, .dechets, .rocherRight{
+    position: absolute;
+}
+.dechets, .rocherRight{
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+}
+.sardinesBottom{
+    top: -87px;
+    right: 23%;
+}
+.poupleBottom{
+    z-index: -1;
+    right: 5%;
+    top: -78px;
+}
+.poissonBottom1{
+    left: 30%;
+    top: -100px;
+}
+.poissonBottom2{
+    bottom:0;
+    left: 10%;
+}
+.poissonBottom3{
+    top: 118px;
+    left: 139px;
 }
 .algues{
     position: absolute;
@@ -201,30 +236,49 @@
     width: 100%;
     bottom: 0;
     overflow: hidden;
-    z-index: -99999999;
     pointer-events: none;
 }
-.leftAlgue{
+.algueLeft, .algueRight{
     position: absolute;
-    right: -20px;
-    bottom: -161px;
+    bottom: 0;
+    width: 100%;
+}
+
+.algueLeft>*, .algueRight>*{
+    position: absolute;
+    bottom: 0;
+}
+.leftAlgue{
+    left: -50px;
+    z-index: -1;
+}
+.leftAlgue2{
+    z-index: -2;
+    left: -10px;
+}
+.rocherLeft{
+    z-index: 4;
 }
 .rightAlgue{
-    position: absolute;
-    left: -20px;
-    bottom: -82px;
+    right: -50px;
+    z-index: -1;
+}
+.rightAlgue1{
+    right: -10px;
+    z-index: -2;
 }
 .sable{
     position: absolute;
     bottom: 0;
-    width: 107em;
-    z-index: -99999999999;
+    width: 150em;
+    z-index: 3;
 }
 .footer>*{
     color: black;
 }
 .footer{
     margin-top: 330px;
+    z-index: 9999999;
 }
 @media screen and (max-width: 1024px) {
     .sacPlastiquesParent{
@@ -238,7 +292,7 @@
         bottom: auto;
     }
     .body1{
-        min-height: 60vh;
+        min-height: 34em;
     }
     .fish1, .goblet{
         width: 130px;
@@ -263,15 +317,6 @@
     }
     .footer{
         z-index: 9999999999;
-    }
-    .sable{
-        width: 154em;
-    }
-    .rightAlgue{
-        left: -70px;
-    }
-    .leftAlgue{
-        display: none;
     }
 }
 @media screen and (max-width: 427px) {

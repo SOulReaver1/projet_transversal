@@ -25,7 +25,7 @@
         <div class="wrapper">
             <nav id="sidebar">
                 <div class="sidebar-header d-flex align-item-center justify-content-center text-center">
-                    <img src="/views/assets/img/logo.png" alt="Notre logo" >
+                    <img src="/views/assets/img/logo_white.svg" alt="Notre logo" width="70px">
                     <h3>Alguaïa Admin</h3>
                 </div>
 

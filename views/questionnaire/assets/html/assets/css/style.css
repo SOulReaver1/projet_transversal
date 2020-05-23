@@ -39,11 +39,21 @@
     flex-wrap: wrap;
     color: white;
 }
+.profilDesc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.profilDesc>h2{
+    text-align: center;
+}
 .profilDesc>p{
     width: 60vmin;
+    text-align: left;
 }
 .profilDesc>*{
-    margin: 30px 0;
+    margin: 30px auto;
 }
 #shareYouResult{
     margin: 150px auto;
@@ -155,6 +165,9 @@
     border-top-right-radius: none;
     border-bottom-right-radius: none;
     color: white;
+}
+.profilDesc>h2>span{
+    text-transform: lowercase;
 }
 .algues{
     position: absolute;

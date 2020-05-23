@@ -8,6 +8,8 @@ if($action == "connect" && $_POST){
     require_once $_SERVER['DOCUMENT_ROOT']."/controllers/admin/questionnaireController.php";
 }else if($action == "contact"){
     require_once $_SERVER['DOCUMENT_ROOT']."/controllers/admin/newletterController.php";
+}else if($action == null){
+    require_once $_SERVER['DOCUMENT_ROOT']."/controllers/admin/analyticsController.php";
 }
 
 if(!isset($_SESSION["login"])){

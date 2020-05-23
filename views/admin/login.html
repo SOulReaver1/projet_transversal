@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="/admin/connect" method="post">
-        <label for="email">Email :
-            <input type="email" name="email" id="email">
-        </label>
-        <label for="pwd">Password :
-            <input type="password" name="pwd" id="pwd">
-        </label>
-        <button type="submit">Submit</button>
-    </form>
-</body>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="TonNom">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" type="image/png" href="/views/assets/img/logo.png"/>
+        <title>Titre</title>
+        <link href="/views/assets/css/reset.css" rel="stylesheet" type="text/css">
+        <link href="/views/admin/assets/css/login.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/font.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="content">
+            <img src="/views/assets/img/logo_white.svg" id="logo" alt="Logo Alguaïa">
+            <h1>Alguaïa</h1>
+            <h1>BACK OFFICE</h1>
+            <form action="/admin/connect" method="post">
+                <h2>CONNECTEZ-VOUS</h2>
+                <div class="field">
+                    <label for="email">Email :
+                        <input type="email" name="email" id="email" placeholder="Adresse email">
+                    </label>
+                    <label for="pwd">Password :
+                        <input type="password" name="pwd" id="pwd" placeholder="Mot de passe">
+                    </label>
+                </div>
+                <button type="submit" id="submit">Connexion</button>
+            </form>
+        </div>
+    </body>
 </html>
