@@ -14,13 +14,13 @@ require_once $_SERVER['DOCUMENT_ROOT']."/factories/abstractedFactory.php";
             }
         }
         function countMails(){
-            $q = "SELECT COUNT(*) AS num FROM newLetter";
+            $q = "SELECT COUNT(*) AS num FROM newletter";
             $stmt = $this->pdo->prepare($q);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_CLASS);
         }
         function countMonthMails(){
-            $q = "SELECT COUNT(*) AS num FROM newLetter WHERE MONTH(created_at)=".date('n');
+            $q = "SELECT COUNT(*) AS num FROM newletter WHERE MONTH(created_at)=".date('n');
             $stmt = $this->pdo->prepare($q);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_CLASS);
