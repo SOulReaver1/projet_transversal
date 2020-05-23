@@ -21,7 +21,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    width: 80%;
+    width: 100%;
 }
 .form-carbone ul li{
     display: flex;
@@ -47,6 +47,9 @@ body{
     text-align: center;
     color: white;
     font-weight: bold;
+}
+.text-uppercase{
+    text-transform: uppercase;
 }
 .roche{
     position: absolute;
@@ -96,5 +99,8 @@ body{
     }
     .algues{
         display: none;
+    }
+    .button-share{
+        font-size: 1rem;
     }
 }

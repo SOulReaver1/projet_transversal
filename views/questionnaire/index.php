@@ -35,7 +35,7 @@
                 <ul id="question<?php echo $key+1;?>" class="ulquestion">
 
                     <li>
-                        <h1>Question <?php echo $key+1;?></h1>                    
+                        <h1 class="text-uppercase">Question <?php echo $key+1;?></h1>                    
                         <i class="fas fa-circle round"></i>
                         <h3><?php echo $value->name;?></h3>
                     </li>
@@ -46,7 +46,7 @@
 
                             <label for="answer<?php echo $value->id.$k+1;?>" class="check">
 
-                                <h3><?php echo $question->name;?></h3>
+                                <?php echo $question->name;?>
 
                             </label>
 

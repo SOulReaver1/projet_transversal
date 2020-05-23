@@ -1,17 +1,21 @@
 #content{
     display: flex;
     flex-direction: column;
+    position: relative;
     width: 100%;
+    overflow-x: hidden;
 }
 .body{
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 999999999;
-    min-height: 52em;
+    height: 52em;
 }
 .body1{
     justify-content: center;
+    max-height: calc(100vh - 139px);
+
 }
 .sacPlastique{
     position: absolute;
@@ -51,6 +55,7 @@
     color: white;
     text-transform: uppercase;
     font-size: 4rem;
+    font-weight: 700;
     text-align: center;
     z-index: 9999999999;
 }
@@ -59,8 +64,9 @@
     text-transform: uppercase;
     color: white;
     margin: auto;
-    font-size: 3rem;
+    font-size: 2.4rem;
     text-align: center;
+    font-weight: 700;
 }
 .fish1, .goblet{
     position: absolute;
@@ -127,11 +133,67 @@
 .body3>*{
     margin: 15px 0;
 }
-.body3Carre{
-    width: 100%;
-    height: 600px;
-    background: #1B1F47;
+#infographieCarrousel{
+    display: none;
 }
+#infography_container{
+    width: 78%;
+    min-width: 1064px;
+    height: 538px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+#before{
+    width: 66%;
+    height: 538px;
+    overflow: hidden;
+    position: absolute;
+    display: block;
+    object-fit: cover;
+    background-image: url(/views/assets/img/infographie/without2020.svg);
+    background-position: left;
+}
+#separation{
+    width: 3px;
+    height: 538px;
+    background-color: white;
+    position: absolute;
+    left: 66%;
+    z-index: 3;
+}
+#separation:before{
+    content: '';
+    display: block;
+    border: solid;
+    border: 15px solid transparent;
+    border-right: 15px solid white;
+    top: 25%;
+    right: 15px;
+    position: absolute;
+}
+#separation:after{
+    content: '';
+    display: block;
+    border: solid;
+    border: 15px solid transparent;
+    border-left: 15px solid white;
+    top: 25%;
+    left: 15px;
+    position: absolute;
+}
+#after{
+    right: 0;
+    width: 34%;
+    height: 538px;
+    overflow: hidden;
+    position: absolute;
+    object-fit: cover;
+    background-image: url(/views/assets/img/infographie/with2020.svg);
+    background-position: right;
+}
+
 .body3List{
     display: flex;
     justify-content: space-around;
@@ -145,17 +207,17 @@
     bottom: 23px;
     width: 100%;
     height: 3px;
-    background: rgba(119, 136, 153, 0.459);
+    background: rgb(255, 255, 255);
 }
 .body3Arrow{
     position: absolute;
     margin: auto;
     top: 0;
-    bottom: 53px;
-    right: -9px;
+    bottom: 55px;
+    right: -8px;
     height: 3px;
     font-size: 2.2rem;
-    color: rgba(119, 136, 153, 0.459);
+    color: rgb(255, 255, 255);
 }
 .body3List>li{
     display: flex;
@@ -267,18 +329,24 @@
     right: -10px;
     z-index: -2;
 }
-.sable{
-    position: absolute;
-    bottom: 0;
-    width: 150em;
-    z-index: 3;
-}
 .footer>*{
     color: black;
 }
 .footer{
+    background-image: url(/views/assets/img/sable.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
     margin-top: 330px;
-    z-index: 9999999;
+    z-index: 3;
+    min-height: 16em;
+}
+@media screen and (max-width: 1100px) {
+    #infography_container{
+        display: none;
+    }
+    #infographieCarrousel{
+        display: block;
+    }
 }
 @media screen and (max-width: 1024px) {
     .sacPlastiquesParent{
@@ -292,7 +360,7 @@
         bottom: auto;
     }
     .body1{
-        min-height: 34em;
+        height: 34em;
     }
     .fish1, .goblet{
         width: 130px;
@@ -310,16 +378,28 @@
     .fish4{
         top: 150px;
     }
+    .poupleBottom{
+        display: none;
+    }
+    .poissonBottom1{
+        display: none;
+    }
+    .algueLeft{
+        left: -178px;
+    }
+    .algueRight{
+        right: -178px;
+    }
     .jerrycan{
         right: 0;
         bottom: 0px;
         width: 100px;
     }
     .footer{
-        z-index: 9999999999;
+        min-height: 25em;
     }
 }
-@media screen and (max-width: 427px) {
+@media screen and (max-width: 600px) {
     .fish1, .sardines{
         display: none;
     }
@@ -343,6 +423,9 @@
         top: auto;
         bottom: 82px;
         width: 130px;
+    }
+    .rocherLeft, .dechets, .rocherRight, .algueRight{
+        display: none;
     }
     .jerrycan{
         bottom: 19px;

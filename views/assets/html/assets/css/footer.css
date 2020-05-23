@@ -12,7 +12,7 @@ footer{
     text-align: center;
     margin-top: auto;
 }
-footer>h1>span{
+footer>h3>span{
     font-weight: bold;
     text-transform: uppercase;
 }

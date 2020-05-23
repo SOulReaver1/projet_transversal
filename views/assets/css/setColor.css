@@ -19,7 +19,6 @@
   border: none;
   color: black;
   font-weight: bold;
-  padding: 16px 0;
   border-radius: 2px;
   text-align: center;
   font-size: 16px;
@@ -41,9 +40,11 @@
   background-color: #555;
 }
 .button1{
-  border: 3px solid #C53050 ;
+  border: 5px solid #C53050 ;
   border-radius: 30px;
   color: #C53050;
+  padding: 15px 30px;
+  text-transform: uppercase;
 }
 .button-share{
   display: flex;
@@ -53,11 +54,18 @@
   background: white;
   border-radius: 30px;
   padding: 20px;
-  width: 60vmin;
+  width: 70vmin;
   font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 .vertiTrait{
-  width: 2px;
+  width: 1px;
   height: 40px;
   background: #C53050;
+}
+@media screen and (max-width: 1024px) {
+  .button-share{
+      font-size: 1rem;
+  }
 }

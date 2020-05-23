@@ -5,19 +5,21 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     background-color: #325FB5;
     border-radius: 10px;
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 1rem;
     transition: 300ms;
     text-align: center;
-    margin: 10px auto;
+    margin: 15px;
     cursor: pointer;
     color: white;
     user-select: none;
     box-sizing: border-box;
+    z-index: 9999999999999;
+    padding: 30px;
 }
 .checked{
   background-image: url(/views/questionnaire/assets/img/checked.svg);
@@ -32,61 +34,3 @@
 .inputcheck{
   display: none;
 }
-input[type="text"] {
-  background: none;
-  color: #c6c6c6;
-  font-size: 18px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  width: 320px;
-  border: none;
-  border-radius: 0;
-  border-bottom: 1px solid #c6c6c6;
-}
-input:focus,
-textarea:focus {
-  outline: none;
-}
-input:focus ~ label, .group input:valid ~ label,
-textarea:focus ~ label,
-textarea:valid ~ label {
-  top: -14px;
-  font-size: 12px;
-  color: #2196F3;
-}
-input:focus ~ .bar:before,
-textarea:focus ~ .bar:before {
-  width: 320px;
-}
-.group {
-    position: relative;
-    margin: 45px 0;
-  }
-  .bar {
-    position: relative;
-    display: block;
-    width: 320px;
-  }
-  .bar:before {
-    content: '';
-    height: 2px;
-    width: 0;
-    bottom: 0px;
-    position: absolute;
-    background: #2196F3;
-    -webkit-transition: 300ms ease all;
-    transition: 300ms ease all;
-    left: 0%;
-  }
-  
-label {
-    color: #838383;
-    font-size: 16px;
-    font-weight: normal;
-    position: absolute;
-    pointer-events: none;
-    left: 5px;
-    top: 10px;
-    -webkit-transition: 300ms ease all;
-    transition: 300ms ease all;
-  }

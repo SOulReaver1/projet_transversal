@@ -53,7 +53,7 @@
         </div>
         <div class="ourConseils">
             <div class="bull">
-                <h1>Comment s'améliorer ?</h1>
+                <h3 class="text-uppercase">Comment s'améliorer ?</h3>
                 <ul class="ourConseilsList">
                     <?php foreach ($getConseils as $key => $value):?>
                         <li>
@@ -66,7 +66,7 @@
             </div>
         </div>
         <div class="promos">
-            <h1>Si tu suis nos conseils, tu as droit à nos chouettes promos !</h1>
+            <h1 class="text-uppercase">Si tu suis nos conseils, tu as droit à nos chouettes promos !</h1>
             <p>
                 Entre ton adresse pour recevoir ta promotion. Pas d'inquiétude, ton adresse mail ne sera pas utilisée pour autre chose de façon ultérieure !
             </p>

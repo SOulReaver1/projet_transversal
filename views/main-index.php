@@ -29,7 +29,7 @@
                 <img src="/views/assets/img/sardines.svg" alt="Les sardines" class="sardines">
                 <h1 class="firstTitle">Sommes nous des <br>pollueurs ?</h1>
             </div>
-            <h2 class="scrollToDiscover">Scrollez pour découvrir <i class="fas fa-long-arrow-alt-down white"></i></h2>
+            <h4 class="scrollToDiscover">Scrollez pour découvrir <img src="/views/assets/img/arrowDown.svg" alt="Arrow down" class=""></h4>
             <img src="/views/assets/img/fish1.svg" alt="Mon poisson" class="fish1">
             <img src="/views/assets/img/goblet.svg" alt="Mon goblet" class="goblet">
         </div>
@@ -49,45 +49,72 @@
             </li>
         </ul>
         <div class="body3 body">
-            <h1>Consommation de plastique mondiale</h1>
-            <div class="body3Carre"></div>
-            <ul class="body3List">
-                <li>
-                    <img src="/views/assets/img/ondes.svg" alt="Des ondes">
-                    <h4>2020</h4>
-                </li>
-                <li>
-                    <img src="/views/assets/img/ondes.svg" alt="Des ondes">
-                    <h4>2030</h4>
-                </li>
-                <li>
-                    <img src="/views/assets/img/ondes.svg" alt="Des ondes">
-                    <h4>2040</h4>
-                </li>
-                <li>
-                    <img src="/views/assets/img/ondes.svg" alt="Des ondes">
-                    <h4>2050</h4>
-                </li>
-                <li>
-                    <img src="/views/assets/img/ondes.svg" alt="Des ondes">
-                    <h4>2060</h4>
-                </li>
-                <i class="fas fa-chevron-right body3Arrow"></i>
-            </ul>
+            <h1 class="text-uppercase">Consommation de plastique mondiale</h1>
+            <div id="infography_container">
+                <div id="before">
+                </div>
+                <div id="separation"></div>
+                <div id="after">
+                </div>
+            </div>
+            <div id="infographieCarrousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/views/assets/img/infographie/without2020.svg" alt="" class="d-block w-100 before_img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/views/assets/img/infographie/with2020.svg" alt="" class="d-block w-100 after_img">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#infographieCarrousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#infographieCarrousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <ul class="body3List" style="letter-spacing: 0px;">
+            <li style="letter-spacing: 0px;">
+                <a href="#2020" class="yearbutton" id="2020">
+                    <img src="/views/assets/img/ondes.svg" alt="Des ondes" style="letter-spacing: 0px;">
+                    <h4 style="letter-spacing: 0px;">2020</h4>
+                </a>
+            </li>
+            <li style="letter-spacing: 0px;">
+                <a href="#2030" class="yearbutton" id="2030">
+                    <img src="/views/assets/img/ondes.svg" alt="Des ondes" style="letter-spacing: 0px;">
+                    <h4 style="letter-spacing: 0px;">2030</h4>
+                </a>
+            </li>
+            <li style="letter-spacing: 0px;">
+                <a href="#2040" class="yearbutton" id="2040">
+                    <img src="/views/assets/img/ondes.svg" alt="Des ondes" style="letter-spacing: 0px;">
+                    <h4 style="letter-spacing: 0px;">2040</h4>
+                </a>
+            </li>
+            <li style="letter-spacing: 0px;">
+                <a href="#2050" class="yearbutton">
+                    <img src="/views/assets/img/ondes.svg" alt="Des ondes" style="letter-spacing: 0px;">
+                    <h4 style="letter-spacing: 0px;">2050</h4>
+                </a>
+            </li>
+            <i class="fas fa-chevron-right body3Arrow" style="letter-spacing: 0px;"></i>
+        </ul>
             <div class="dropdown m-auto">
                 <h2 class="dropdownTitle mx-3">Année</h2>
                 <button class="btn btn-ala dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Dropdown
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <button class="dropdown-item" type="button">Année 2020</button>
-                    <button class="dropdown-item" type="button">Année 2030</button>
-                    <button class="dropdown-item" type="button">Année 2040</button>
-                    <button class="dropdown-item" type="button">Année 2050</button>
-                    <button class="dropdown-item" type="button">Année 2060</button>
+                    <a href="#2020" class="dropdown-item yearbutton">Année 2020</a>
+                    <a href="#2030" class="dropdown-item yearbutton">Année 2030</a>
+                    <a href="#2040" class="dropdown-item yearbutton">Année 2040</a>
+                    <a href="#2050" class="dropdown-item yearbutton">Année 2050</a>
                 </div>
             </div>
-            <i class="fas fa-long-arrow-alt-down white arrow-down"></i>
+            <img src="/views/assets/img/arrowDown.svg" alt="Arrow down" class="white arrow-down">
         </div>
         <div class="lastBody m-auto d-flex flex-column justify-content-center align-items-center">
             <div>
@@ -120,7 +147,7 @@
     </div>
     <img src="/views/assets/img/bob.svg" alt="" class="bob">
     <img src="/views/assets/img/dechets.svg" alt="" class="dechets">
-    <img src="/views/assets/img/sable.svg" alt="" class="sable">
     <footer data-include="footer" class="footer"></footer>
 </body>
+<script src="/views/assets/js/script.js"></script>
 </html>

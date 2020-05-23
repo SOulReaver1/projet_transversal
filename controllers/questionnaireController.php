@@ -24,7 +24,6 @@ if($action == "resultat-ecolo" && $_POST){
         $getConseils = $questions->getConseils(1);
     }
     $record = $questions->recordQuestion($getProfil[0]->idProfil);
-    var_dump($totalPoints);
     require_once $_SERVER['DOCUMENT_ROOT'].'/views/questionnaire/assets/html/resultatEcolo.php';
 }
 else{

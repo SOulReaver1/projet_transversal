@@ -10,7 +10,7 @@
     overflow-x: hidden;
 }
 #content>div:not(.algues){
-    margin: 150px auto;
+    margin: 100px auto;
 }
 .ecoloDesc{
     display: flex;
@@ -24,13 +24,14 @@
 .ecoloDesc>p{
     color: white;
     width: 60vmin;
+    font-size: 1.2rem;
 }
 .shareNetwork{
     display: flex;
     align-items: center;
 }
 .shareNetwork>li{
-    margin: 0 5px;
+    margin: 0 10px;
 }
 .profil{
     display: flex;
@@ -51,6 +52,7 @@
 .profilDesc>p{
     width: 60vmin;
     text-align: left;
+    font-size: 1.2rem;
 }
 .profilDesc>*{
     margin: 30px auto;
@@ -72,8 +74,8 @@
     min-height: 300px;
     background: white;
     position: relative;
-    padding: 30px;
-    border-radius: 20px;
+    padding: 50px;
+    border-radius: 50px;
     margin: auto;
 }
 .bull::after{
@@ -88,7 +90,7 @@
     border-right : 54px solid transparent;
     border-left : 6px solid transparent;
 }
-.bull>h1{
+.bull>h3{
     color: #C53050;
 }
 .ourConseilsList{
@@ -141,7 +143,7 @@
 }
 .input-newsletter{
     border: 2px solid white;
-    border-radius: 10px;
+    border-radius: 50px;
     border-top-left-radius: none;
     border-bottom-left-radius: none;
     color: white;
@@ -151,9 +153,9 @@
     background-repeat: no-repeat;
     background-size: 30px;
     background-position-y: center;
-    background-position-x: 10px;
+    background-position-x: 17px;
     background-color: transparent;
-    padding-left: 50px;
+    padding-left: 57px;
 }
 .input-newsletter:focus{
     background-color: transparent;
@@ -161,7 +163,7 @@
 }
 .button-sendNewsletter{
     border: 2px solid white;
-    border-radius: 10px;
+    border-radius: 50px;
     border-top-right-radius: none;
     border-bottom-right-radius: none;
     color: white;
@@ -209,6 +211,9 @@
     }
     .leftAlgue{
         right: -70px;
+    }
+    .ecoloDesc>p, .profilDesc>p{
+        width: 90vmin;
     }
 }
 
