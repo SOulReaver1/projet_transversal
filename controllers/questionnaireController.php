@@ -5,6 +5,7 @@ $page_id = 2;
 $visitor_ip = $_SERVER['REMOTE_ADDR'];
 $total_views = $main->total_views($page_id);
 $add_views = $main->add_view($visitor_ip, $page_id);
+$add_views = $main->add_view($visitor_ip, 3);
 require_once $_SERVER['DOCUMENT_ROOT'].'/factories/questionnaireFactory.php';
 $questions = new questions($pdo);
 $allQuestions = $questions->allQuestions();
