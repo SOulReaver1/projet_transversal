@@ -110,5 +110,8 @@
         right: 0;
         left: 0;
     }
+    .accessibilityMenu{
+        max-width: 90vmin;
+    }
 }
 

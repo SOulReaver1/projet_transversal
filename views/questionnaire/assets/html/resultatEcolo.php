@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alguaïa">
+    <meta name="copyright" content="Mouloud Bessa - Alguaïa - https://www.ilandev.fr/">
+    <meta name="language" content="fr">
+    <link rel="icon" type="image/png" href="/views/assets/img/logo.png"/>
     <link rel="stylesheet" href="/views/assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="/views/questionnaire/assets/html/assets/css/style.css">

@@ -5,20 +5,21 @@ $( document ).ready(function() {
             $(this).css({"display": "block"})
         }
     })
-
     $(".ulquestion").each(function(key, ul){
         $(".back-btn").on("click", function(){
-            if(ul.previousElementSibling !== null && ul.style.display !== "none"){
-                ul.style.display == "none"
-                ul.previousElementSibling.style.display == "block"
-            }
+           if(ul.style.display == "block"){
+               if(ul.previousElementSibling !== null){
+                   ul.style.display = "none"
+                   ul.previousElementSibling.style.display = "block"
+               }
+           }
         })
         $(this).find(".check").each(function(k, label){
             let nextUl = ul.nextElementSibling
             $(this).on("click", function(){
                 $(this).parent().children("label").removeClass("checked")
                 $(this).addClass("checked")
-                $("#buttonForm").one("click", function(e){
+                $("#buttonForm").on("click", function(e){
                     if(nextUl.id !== "buttonForm"){
                         ul.style.display = "none"
                         ul.nextElementSibling.style.display = "block"

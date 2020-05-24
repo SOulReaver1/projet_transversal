@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alguaïa">
+    <meta name="copyright" content="Mouloud Bessa - Alguaïa - https://www.ilandev.fr/">
+    <meta name="language" content="fr">
+    <link rel="icon" type="image/png" href="/views/assets/img/logo.png"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <link rel="stylesheet" href="/views/assets/css/reset.css">
     <link rel="stylesheet" href="/views/questionnaire/assets/css/style.css">
@@ -11,7 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/views/questionnaire/assets/js/script.js"></script>
     <script src="/views/assets/js/config.js"></script>
-    <title>Document</title>
+    <title>Alguaïa | Questionnaire</title>
 </head>
 <body>
     <header data-include="header" class="header"></header>

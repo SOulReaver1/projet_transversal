@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alguaïa">
+    <meta name="copyright" content="Mouloud Bessa - Alguaïa - https://www.ilandev.fr/">
+    <meta name="language" content="fr">
+    <link rel="icon" type="image/png" href="/views/assets/img/logo.png"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="/views/assets/css/reset.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -10,18 +14,22 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/views/assets/css/style.css">
     <script src="/views/assets/js/config.js"></script>
-    <title>Document</title>
+    <script src="/views/assets/js/anims.js"></script>
+    <title>Alguaïa</title>
 </head>
 <body>
+    <div class="sacPlastiquesParent" id="scrollDown">
+        <img src="/views/assets/img/sacPlastique1.svg" alt="Sac plastique" class="sacPlastique sacPlastique1">
+        <img src="/views/assets/img/ondes.svg" alt="Ondes" class="ondes ondes1">
+        <img src="/views/assets/img/ondes.svg" alt="Ondes" class="ondes ondes2">
+        <p class="sacplastiquetext1">Sac Alguaïa</p>
+        <img src="/views/assets/img/sacPlastique2.svg" alt="Sac plastique" class="sacPlastique sacPlastique2">
+        <p class="sacplastiquetext2">Sac plastique</p>
+    </div>
     <header data-include="header" class="header"></header>
     <div id="content">
         <div class="body1 body">
-            <div class="sacPlastiquesParent">
-                <img src="/views/assets/img/sacPlastique1.svg" alt="Sac plastique" class="sacPlastique">
-                <p class="sacplastiquetext1">Sac Alguaïa</p>
-                <img src="/views/assets/img/sacPlastique2.svg" alt="Sac plastique" class="sacPlastique sacPlastique2">
-                <p class="sacplastiquetext2">Sac plastique</p>
-            </div>
+            
             
             <div class="titleFirst">
                 <img src="/views/assets/img/sardines.svg" alt="Les sardines" class="sardines">

@@ -8,6 +8,7 @@
 .body{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     position: relative;
     z-index: 999999999;
     height: 52em;
@@ -17,17 +18,37 @@
     max-height: calc(100vh - 139px);
 
 }
-.sacPlastique{
+.sacPlastique, .ondes{
     position: absolute;
     margin: 0 50px;
+    width: 127px;
+}
+.ondes{
+    opacity: 1;
+    transition: opacity 300ms;
+}
+.ondes1{
+    top: 68px;
+    left: 46px;
+}
+.ondes2{
+    top: 43px;
+    right: 69px;
+    z-index: 999999999999;
+}
+.sacPlastique1{
+    opacity: 1;
+    transition: opacity 5s;
 }
 .sacPlastiquesParent{
-    position: relative;
+    position: absolute;
     height: 10em;
+    top: 130px;
     width: 100%;
+    z-index: 9999999999999999999999999999999;
 }
 .sacPlastique2{
-    right: 0;
+    right: 0;  
 }
 .sacPlastiquesParent>p{
     position: absolute;
@@ -39,17 +60,21 @@
 .sacplastiquetext1{
     bottom: 50px;
     left: 165px;
+    opacity: 1;
+    transition: opacity 300ms;
 }
 .sacplastiquetext2{
     bottom: 116px;
     right: 194px;
+    opacity: 1;
+    transition: opacity 300ms;
 }
 .white{
     color: white;
 }
 .titleFirst{
     position: relative;
-    margin: auto;
+    margin: 130px auto 0 auto;
 }
 .firstTitle{
     color: white;
@@ -269,6 +294,7 @@
 .bob{
     bottom: 11%;
     right: 22%;
+    animation: bob 4s infinite alternate;
 }
 .bob2{
     display: none;
@@ -290,17 +316,20 @@
     bottom: 21%;
 }
 .poissonBottom1{
-    left: 35%;
+    right: 0%;
     bottom: 28%;
+    animation: poissonBottom1 10s linear infinite;
 }
 .poissonBottom2{
     bottom: 10%;
     left: 11%;
+    animation: poissonBottom2 10s infinite;
 }
 .poissonBottom3{
     z-index: -2;
     bottom: 20%;
     left: 119px;
+    animation: poissonBottom3 10s infinite;
 }
 .algues{
     position: absolute;
@@ -460,6 +489,7 @@
     }
     .bob2{
         display: block;
+        right: 5%;
     }
     .rocherLeft, .dechets, .rocherRight, .algueRight{
         display: none;
@@ -474,4 +504,29 @@
     .dropdown{
         display: flex;
     }
+}
+
+@keyframes bob{
+    0%   { bottom: 15%; right: 25%}
+    100% { bottom: 7%; right: 9%;}
+}
+@keyframes poissonBottom2{
+    0%   { bottom: 10%; left: 11%;}
+    25%  { bottom: 30%; left: 30%;}
+    50%   { transform: rotate(180deg);}
+    75%     { left: -200px;}
+    100% { bottom: 10%; left: 11%;}
+}
+@keyframes poissonBottom3{
+    0%   { bottom: 20%;
+        left: 119px;}
+    25%  { bottom: 23%; left: 30%;}
+    50%   { transform: rotate(180deg);}
+    75%     { left: -200px;}
+    100% { bottom: 20%;
+        left: 119px;}
+}
+@keyframes poissonBottom1{
+    0%   { bottom: 29%; right: 0}
+    100% { bottom: 7%; right: 100%;}
 }
