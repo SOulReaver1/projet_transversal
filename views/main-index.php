@@ -50,7 +50,7 @@
                     <p>Nos sacs se déversent dans la rivière la Vilaine dans la ville de Rennes en Bretagne. Nous qui prônons le respect de l'environnement, serions à notre tour devenus des pollueurs ? Les journaux en parlent : ALGUAÏA dégringole. Nos excuses publiques ne suffisent pas à calmer l'encre que font couler (aha, vous l'avez ?) nos détracteurs. Alors nous répondons grâce à cette plateforme : sommes-nous des pollueurs ?
                     <br>
                     <br>
-                    Découvrez en toute transparence notre consommation plastique, nos prévisions sur le futur du plastique, et notre empreinte environnementale.</p>
+                    Découvrez en toute transparence nos actions menés, notre impact sur l’utilisation des sacs plastique, nos prévisions sur le futur de nos sacs et notre empreinte environnementale.</p>
                 </div>
             </li>
         </ul>

@@ -72,7 +72,7 @@
             </div>
         </div>
         <div class="promos">
-            <h1 class="text-uppercase">Si tu suis nos conseils, tu as droit à nos chouettes promos !</h1>
+            <h1 class="text-uppercase">Suis nos conseils et bénéficie de nos chouettes promos !</h1>
             <p>
                 Entre ton adresse pour recevoir ta promotion. Pas d'inquiétude, ton adresse mail ne sera pas utilisée pour autre chose de façon ultérieure !
             </p>

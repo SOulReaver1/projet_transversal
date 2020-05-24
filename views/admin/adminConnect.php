@@ -56,17 +56,11 @@
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
 
-                        <div class="navbar-header">
+                        <div class="navbar-header d-flex justify-content-between align-items-center w-100">
                             <button type="button" id="sidebarCollapse" class="btn btn-ala navbar-btn">
                                 <i class="fas fa-bars"></i>
                             </button>
-                        </div>
-
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="#"><?php echo $_SESSION["login"][0]->firstname." ".$_SESSION["login"][0]->lastname;?></a></li>
-                                <li><button type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default dropdown-toggle"><img src="<?php echo $_SESSION["login"][0]->url;?>" alt="" width="50px"></button></li>
-                            </ul>
+                            <a href="/controllers/admin/library/logout.php">Deconnexion</a>
                         </div>
                     </div>
                 </nav>
