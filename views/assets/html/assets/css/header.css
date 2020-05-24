@@ -65,6 +65,9 @@ header>a:first-child{
         display: block;
         z-index: 99999999;
     }
+    header>a:first-child{
+        margin-left: 0;
+    }
     header>a{
         margin-left: 30px;
     }
