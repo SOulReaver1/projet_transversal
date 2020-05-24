@@ -81,7 +81,7 @@ class main extends abstractFactory{
       if($page_id == 3){
             $q = "UPDATE pages SET total_views = total_views + 1 WHERE id='$page_id'";
             $this->pdo->query($q);
-            }
+
       }
     }
     function statsPages($pageStats, $total_views){
