@@ -7,9 +7,15 @@ $main = new main($pdo);
 $questionnaire_page = 2;
 $home_page = 1;
 $total_views_questionnaire = $main->total_views($questionnaire_page);
+
 $total_views_home = $main->total_views($home_page);
+
+$total_views_questionnaireStart = $main->total_views(3);
+
 $total_views = $main->total_views();
-$stats_questionnaire = $main->statsPages(3, $total_views);
+
+$stats_questionnaire = $main->statsPages(3, $total_views_questionnaireStart);
+
 $recordsCount = $questions->recordsCount()[0]->num;
 $calcTypeOfProfil = $questions->calcTypeOfProfil();
 $statsMail = $newletter->statMail();
