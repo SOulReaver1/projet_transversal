@@ -65,6 +65,9 @@ i, span {
     color: #fff;
     transition: all 0.3s;
     user-select: none;
+    background-image: url(/views/admin/assets/img/Groupe\ 706.svg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
 }
 .list-group-item+.list-group-item {
     border-top-width: 1;

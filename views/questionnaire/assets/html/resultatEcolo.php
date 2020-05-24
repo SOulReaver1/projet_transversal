@@ -7,8 +7,8 @@
     <meta name="copyright" content="Mouloud Bessa - Alguaïa - https://www.ilandev.fr/">
     <meta name="language" content="fr">
     <link rel="icon" type="image/png" href="/views/assets/img/logo.png"/>
-    <link rel="stylesheet" href="/views/assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/views/assets/css/reset.css">
     <link rel="stylesheet" href="/views/questionnaire/assets/html/assets/css/style.css">
     <link rel="stylesheet" href="/views/assets/css/setColor.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -27,7 +27,7 @@
         </div>
         <form action="/questionnaire/shareResultOnNetwork" method="post">
             <button type="submit" id="shareYouResult" class="button button-share" name="submit">
-            Partager ton résultat
+            Partager
             <div class="vertiTrait"></div>
                 <ul class="shareNetwork">
                     <li>
@@ -77,7 +77,7 @@
                 Entre ton adresse pour recevoir ta promotion. Pas d'inquiétude, ton adresse mail ne sera pas utilisée pour autre chose de façon ultérieure !
             </p>
             
-            <form class="input-group mb-3 button-newsletter" method="post" action="/questionnaire/newsletter">
+            <form class="input-group mb-3 d-flex justify-content-center button-newsletter" method="post" action="/questionnaire/newsletter">
                 <input type="email" class="form-control input-newsletter" placeholder="Votre adresse ici" aria-label="Votre adresse ici" aria-describedby="button-addon2" name="newsletterEmail">
                 <div class="input-group-append">
                     <button class="btn button-sendNewsletter" type="submit" id="button-addon2">Envoyer</button>

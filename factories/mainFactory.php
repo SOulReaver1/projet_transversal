@@ -70,23 +70,20 @@ class main extends abstractFactory{
     {
       if($this->is_unique_view($visitor_ip, $page_id) === true)
       {
-        // insert unique visitor record for checking whether the visit is unique or not in future.
         $q = "INSERT INTO page_views (visitor_ip, page_id) VALUES ('$visitor_ip', '$page_id')";
 
         if($this->pdo->query($q))
         {
-          // At this point unique visitor record is created successfully. Now update total_views of specific page.
           $q = "UPDATE pages SET total_views = total_views + 1 WHERE id='$page_id'";
           
-          if(!$this->pdo->query($q))
-          {
-            echo "Error updating record: " . mysqli_error($conn);
-          }
         }
-        else
-        {
-          echo "Error inserting record: " . mysqli_error($conn);
-        }
+      }
+      if($page_id == 3){
+            if($this->pdo->query($q))
+            {
+            $q = "UPDATE pages SET total_views = total_views + 1 WHERE id='$page_id'";
+            
+            }
       }
     }
     function statsPages($pageStats, $total_views){

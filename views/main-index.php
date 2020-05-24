@@ -33,7 +33,7 @@
             
             <div class="titleFirst">
                 <img src="/views/assets/img/sardines.svg" alt="Les sardines" class="sardines">
-                <h1 class="firstTitle">Sommes nous des <br>pollueurs ?</h1>
+                <h1 class="firstTitle">Sommes-nous des <br>pollueurs ?</h1>
             </div>
             <h4 class="scrollToDiscover">Scrollez pour découvrir <img src="/views/assets/img/arrowDown.svg" alt="Arrow down" class=""></h4>
             <img src="/views/assets/img/fish1.svg" alt="Mon poisson" class="fish1">
@@ -47,7 +47,7 @@
                 <p>2020</p>
                 <div class="round"></div>
                 <div>
-                    <p>Nos sacs se déversent dans la rivière NOM à VILLE. Catastrophe. Nous qui prônons le respect de l'environnement, serions à notre tour devenus des pollueurs ? Les journaux en parlent : ALGUAÏA dégringole. Nos excuses publiques ne suffisent pas à calmer l'encre que font couler (aha, vous l'avez ?) nos détracteurs. Alors nous répondons grâce à cette plateforme : sommes-nous des pollueurs ?
+                    <p>Nos sacs se déversent dans la rivière la Vilaine dans la ville de Rennes en Bretagne. Nous qui prônons le respect de l'environnement, serions à notre tour devenus des pollueurs ? Les journaux en parlent : ALGUAÏA dégringole. Nos excuses publiques ne suffisent pas à calmer l'encre que font couler (aha, vous l'avez ?) nos détracteurs. Alors nous répondons grâce à cette plateforme : sommes-nous des pollueurs ?
                     <br>
                     <br>
                     Découvrez en toute transparence notre consommation plastique, nos prévisions sur le futur du plastique, et notre empreinte environnementale.</p>

@@ -141,6 +141,12 @@
 .input-newsletter::placeholder{
     color: white;
 }
+#button-addon3{
+    display: none;
+    margin: auto;
+}
+
+
 .input-newsletter{
     border: 2px solid white;
     border-radius: 50px;
@@ -164,8 +170,8 @@
 .button-sendNewsletter{
     border: 2px solid white;
     border-radius: 50px;
-    border-top-right-radius: none;
-    border-bottom-right-radius: none;
+    border-top-left-radius: none;
+    border-bottom-left-radius: none;
     color: white;
 }
 .profilDesc>h2>span{
@@ -212,8 +218,26 @@
     .leftAlgue{
         right: -70px;
     }
+    .button-newsletter{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .input-group>.form-control{
+        min-width: 100%;
+    }
     .ecoloDesc>p, .profilDesc>p{
         width: 90vmin;
     }
+    .button-sendNewsletter{
+        margin-top: 10px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+    .input-group>.form-control:not(:last-child){
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+    
 }
 

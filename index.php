@@ -31,5 +31,6 @@ if($controller == "main"){
   require_once $_SERVER['DOCUMENT_ROOT']."/controllers/questionnaireController.php";
 }
 else{
-  require_once $_SERVER['DOCUMENT_ROOT']."/controllers/404Controller.php";
+  require_once $_SERVER['DOCUMENT_ROOT']."/controllers/mainController.php";
+
 }

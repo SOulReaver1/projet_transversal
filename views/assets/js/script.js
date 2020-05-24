@@ -34,20 +34,31 @@ window.addEventListener('mouseup', e =>{
 });
 
 /* Infography_change */
-
+var targetId = "2020"
+redimensionnement(targetId);
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.yearbutton').forEach(elem => {
+        targetId = elem.getAttribute('href').split('#')[1];
         elem.addEventListener('click', (evt) => {
             evt.preventDefault();
-    
-            const targetId = elem.getAttribute('href').split('#')[1];
-            var before_img = "/views/assets/img/infographie/without" + String(targetId) + ".svg";
-            var after_img = "/views/assets/img/infographie/with" + String(targetId) + ".svg";
-            
-            before_container.style.backgroundImage="url("+before_img+")";
-            $(".before_img").attr("src", `${before_img}`);
-            after_container.style.backgroundImage="url("+after_img+")";
-            $(".after_img").attr("src", `${after_img}`);
+            targetId = elem.getAttribute('href').split('#')[1];
+            redimensionnement(targetId);
         });
     });
 });
+window.addEventListener("resize", () => {
+    redimensionnement(targetId);
+})
+function redimensionnement(targetId){
+    if(window.innerWidth <= 1080 && window.innerWidth > 600){
+        $(".before_img").attr("src", "/views/assets/img/infographie/tablette/without" + String(targetId) + ".svg");
+        $(".after_img").attr("src", "/views/assets/img/infographie/tablette/with" + String(targetId) + ".svg");
+    }else if(window.innerWidth <= 600){
+        $(".before_img").attr("src", "/views/assets/img/infographie/mobile/without" + String(targetId) + ".svg");
+        $(".after_img").attr("src", "/views/assets/img/infographie/mobile//with" + String(targetId) + ".svg");
+    }else{
+        before_container.style.backgroundImage=`url(/views/assets/img/infographie/without${String(targetId)}.svg)`;
+        after_container.style.backgroundImage=`url(/views/assets/img/infographie/with${String(targetId)}.svg)`;
+    }
+}
+

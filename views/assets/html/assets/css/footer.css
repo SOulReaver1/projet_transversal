@@ -11,6 +11,7 @@ footer{
     color: white;
     text-align: center;
     margin-top: auto;
+    z-index: 999999999999999999;
 }
 footer>h3>span{
     font-weight: bold;
