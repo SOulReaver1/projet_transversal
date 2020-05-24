@@ -75,7 +75,7 @@ class main extends abstractFactory{
         if($this->pdo->query($q))
         {
           $q = "UPDATE pages SET total_views = total_views + 1 WHERE id='$page_id'";
-          
+          $this->pdo->query($q);
         }
       }
       if($page_id == 3){
@@ -85,7 +85,7 @@ class main extends abstractFactory{
       }
     }
     function statsPages($pageStats, $total_views){
-        $q = "SELECT (SELECT total_views AS pageStats FROM pages WHERE id = $pageStats) * 100 / $total_views";
+        $q = "SELECT (SELECT total_views AS pageStats FROM pages WHERE id = $pageStats) * 100 / ";
         $stmt = $this->pdo->query($q);
         return $stmt->fetchColumn();
     }
