@@ -43,7 +43,7 @@
             <div class="card color-analytics bg-light m-3" style="max-width: 18rem;">
                 <div class="card-header text-uppercase">Nombre de tests débutés</div>
                 <div class="card-body">
-                    <h5 class="card-title"><?php echo $total_views_questionnaire;?> tests débutés</h5>
+                    <h5 class="card-title"><?php echo $total_views_questionnaireStart;?> tests débutés</h5>
                     <p class="card-text"><?php echo round($stats_questionnaire);?>% des visites</p>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                 <div class="card-header text-uppercase">Nombre de tests achevés</div>
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $recordsCount;?> tests achevés</h5>
-                    <p class="card-text">sur les <?php echo $total_views_questionnaire;?> débutés soit, <?php echo round($recordsCount * 100 / $total_views_questionnaire);?>% des tests</p>
+                    <p class="card-text">sur les <?php echo $total_views_questionnaire;?> débutés soit, <?php echo round($recordsCount * 100 / $total_views_questionnaireStart);?>% des tests</p>
                 </div>
             </div>
             <div class="w-100"></div>
