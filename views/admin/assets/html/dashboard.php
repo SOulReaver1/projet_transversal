@@ -10,11 +10,6 @@
         <h1 class="text-uppercase mb-4">
             Analytique
         </h1>
-        <span class="text-success"></span>
-        <button class="d-inline-block btn btn-ala my-2" data-toggle="collapse" data-target="#collapseAddQuestion" aria-expanded="false" aria-controls="collapseAddQuestion" id="addQuestionButton">
-            <i class="fab fa-searchengin mr-2"></i>
-            Plus de détails
-        </button>
     </div>
     
     <div class="container w-100">
