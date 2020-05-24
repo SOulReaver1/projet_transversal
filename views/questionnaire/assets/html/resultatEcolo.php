@@ -25,21 +25,24 @@
                 <?php echo $getProfil[0]->resultDesc;?>
             </p>
         </div>
-        <button type="button" id="shareYouResult" class="button button-share">
+        <form action="/questionnaire/shareResultOnNetwork" method="post">
+            <button type="submit" id="shareYouResult" class="button button-share" name="submit">
             Partager ton résultat
             <div class="vertiTrait"></div>
-            <ul class="shareNetwork">
-                <li>
-                    <i class="fab fa-facebook"></i>
-                </li>
-                <li>
-                    <i class="fab fa-twitter"></i>
-                </li>
-                <li>
-                    <i class="fab fa-instagram"></i>
-                </li>
-            </ul>
-        </button>
+                <ul class="shareNetwork">
+                    <li>
+                        <i class="fab fa-facebook"></i>
+                    </li>
+                    <li>
+                        <i class="fab fa-twitter"></i>
+                    </li>
+                    <li>
+                        <i class="fab fa-instagram"></i>
+                    </li>
+                </ul>
+            </button>
+        </form>
+        
         <div class="profil">
             <div class="profilDesc">
                 <h2>
@@ -74,7 +77,7 @@
                 Entre ton adresse pour recevoir ta promotion. Pas d'inquiétude, ton adresse mail ne sera pas utilisée pour autre chose de façon ultérieure !
             </p>
             
-            <form class="input-group mb-3 button-newsletter" method="post" action="/questionnaire/newsLetter">
+            <form class="input-group mb-3 button-newsletter" method="post" action="/questionnaire/newsletter">
                 <input type="email" class="form-control input-newsletter" placeholder="Votre adresse ici" aria-label="Votre adresse ici" aria-describedby="button-addon2" name="newsletterEmail">
                 <div class="input-group-append">
                     <button class="btn button-sendNewsletter" type="submit" id="button-addon2">Envoyer</button>

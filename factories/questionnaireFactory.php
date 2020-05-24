@@ -110,8 +110,9 @@ require_once $_SERVER['DOCUMENT_ROOT']."/factories/abstractedFactory.php";
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_CLASS);
         }
+
         function calcTypeOfProfil(){
-            $q = "SELECT resultatecoloprofil.name, COUNT(*) * 100.0 / (SELECT COUNT(*) FROM recordquestions) AS stats, resultatecoloprofil.img AS img
+            $q = "SELECT resultatecoloprofil.name, COUNT(*) * 100.0 / (SELECT COUNT(*) FROM recordquestions) AS stats, resultatecoloprofil.img AS img, (SELECT COUNT(*) FROM newletter) / COUNT(*) * 100 AS statsMail
             FROM recordquestions
             INNER JOIN resultatecoloprofil ON resultatecoloprofil.id = recordquestions.profil_id
             GROUP BY profil_id";
@@ -136,5 +137,15 @@ require_once $_SERVER['DOCUMENT_ROOT']."/factories/abstractedFactory.php";
             }catch (Exception $e) {
                 echo 'Exception reçue : ',  $e->getMessage(), "\n";
             }
+        }
+        function shareResultOnNetwork($ip){
+            $q = "INSERT INTO shareResult (ip) VALUES (:ip)";
+            $stmt = $this->pdo->prepare($q);
+            $stmt->execute([":ip" => $ip]);
+        }
+        function countShare(){
+            $q = "SELECT COUNT(*) FROM shareResult";
+            $stmt = $this->pdo->query($q);
+            return $stmt->fetchColumn();
         }
     }

@@ -34,6 +34,11 @@
             <h1>Quel type de pollueur êtes-vous ?</h1>
         </div>
         <form action="/questionnaire/resultat-ecolo" method="post" class="form-carbone">
+            <?php if(isset($_GET["mail"]) && $_GET["mail"] == "true"):?>
+                <p style="color: green;"><?php echo "Votre mail à bien été enregistrer !";?></p>
+            <?php elseif(isset($_GET["share"]) && $_GET["share"] == "true"):?>
+                <p style="color: green;"><?php echo "Le partage à été effectuer avec succès";?></p>
+            <?php endif;?>
             <?php foreach ($allQuestions as $key => $value):?>    
                 <ul id="question<?php echo $key+1;?>" class="ulquestion">
 
