@@ -139,7 +139,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/factories/abstractedFactory.php";
             }
         }
         function shareResultOnNetwork($ip){
-            $q = "INSERT INTO shareResult (ip) VALUES (:ip)";
+            $q = "INSERT INTO shareresult (ip) VALUES (:ip)";
             $stmt = $this->pdo->prepare($q);
             $stmt->execute([":ip" => $ip]);
         }
