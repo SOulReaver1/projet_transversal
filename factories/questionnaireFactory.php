@@ -144,7 +144,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/factories/abstractedFactory.php";
             $stmt->execute([":ip" => $ip]);
         }
         function countShare(){
-            $q = "SELECT COUNT(*) FROM shareResult";
+            $q = "SELECT COUNT(*) FROM shareresult";
             $stmt = $this->pdo->query($q);
             return $stmt->fetchColumn();
         }
