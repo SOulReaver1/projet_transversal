@@ -85,7 +85,7 @@ class main extends abstractFactory{
       }
     }
     function statsPages($pageStats, $total_views){
-        $q = "SELECT (SELECT total_views AS pageStats FROM pages WHERE id = $pageStats) * 100 / ";
+        $q = "SELECT (SELECT total_views AS pageStats FROM pages WHERE id = $pageStats) * 100 / $total_views";
         $stmt = $this->pdo->query($q);
         return $stmt->fetchColumn();
     }
