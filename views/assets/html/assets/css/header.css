@@ -7,25 +7,22 @@ header{
 }
 .header{
     padding: 30px 0;
-
 }
-header>a{
+header>a:first-child{
     margin-left: 100px;
 }
-header>ul{
+.desktopMenu{
+    display: flex;
     margin-right: 100px;
 }
-header>ul{
-    display: flex;
-}
-a{
+.desktopMenu a{
 	color: white;
 }
-a:hover{
+.desktopMenu a:hover{
 	text-decoration: none;
 	color: white;
 }
-header>ul>li{
+.desktopMenu>li{
     margin: 0 30px;
     text-transform: uppercase;
     color: white;
@@ -39,14 +36,40 @@ header>ul>li{
     color: white;
     margin-right: 30px;
 }
+.burgerMenuList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-height: 0px;
+    width: 100%;
+    background: white;
+    overflow: hidden;
+    transition: max-height 300ms ease;
+}
+.burgerMenuList>li{
+    margin: 30px 0;
+}
+.burgerMenuList a{
+    color: #463175;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
 @media screen and (max-width: 1024px) {
     #fasBurger{
         display: block;
+        z-index: 99999999;
     }
     header>a{
         margin-left: 30px;
     }
-    header>ul{
+    header>ul:not(.burgerMenuList){
         display: none;
     }
+    
   }

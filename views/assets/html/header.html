@@ -3,13 +3,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/views/assets/html/assets/css/header.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <script src="/views/assets/html/assets/js/header.js"></script>
 </head>
-
 <header>
     <a href="/">
         <img src="/views/assets/img/logo_white.svg" alt="Logo Alguaïa" width="75px">
     </a>
-    <ul>
+    <ul class="desktopMenu">
         <li>
             <a href="/">Accueil</a>
         </li>
@@ -18,5 +18,25 @@
         </li>
     </ul>
     <i class="fas fa-bars" id="fasBurger"></i>
+    <ul class="burgerMenuList">
+        <li>
+            <a href="/">
+                <img src="/views/assets/img/logo.svg" alt="Logo Alguaïa" width="75px">
+            </a>
+        </li>
+        <li>
+            <a href="/">Accueil</a>
+        </li>
+        <li>
+            <a href="/questionnaire">Questionnaire</a>
+        </li>
+        <li>
+            <div class="menuAccessibilite"></div>
+            <script>
+                var menuAccessibilite = '/views/assets/html/menuAccessibilite.html';
+                $(".menuAccessibilite").load(menuAccessibilite);
+            </script>
+        </li>
+    </ul>
 </header>
 

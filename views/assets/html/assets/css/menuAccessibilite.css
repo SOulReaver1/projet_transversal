@@ -13,7 +13,7 @@
     padding: 3px;
     background: whitesmoke;
     user-select: none;
-    z-index: 99999999999;
+    z-index: 999999999999;
 }
 
 .headerAccessibilityMenu{
@@ -104,13 +104,11 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .accessibilityLogo{
-        margin: 100px 10px;
-    }
-}
-@media screen and (max-width: 479px) {
-    .accessibilityLogo{
+    .accessibilityLogo, .accessibilityMenu{
         margin: 0;
+        position: relative;
+        right: 0;
+        left: 0;
     }
 }
 

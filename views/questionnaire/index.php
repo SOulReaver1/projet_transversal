@@ -15,7 +15,6 @@
 </head>
 <body>
     <header data-include="header" class="header"></header>
-    <div data-include="menuAccessibilite"></div>
     <div class="roche"></div>
     <div class="algues">
         <div class="algues1 algue"></div>

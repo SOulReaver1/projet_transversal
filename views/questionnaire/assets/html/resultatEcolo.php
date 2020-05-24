@@ -13,7 +13,6 @@
 </head>
 <body>
     <header data-include="header" class="header"></header>
-    <div data-include="menuAccessibilite"></div>
     <div id="content">
         <h1 class="first-title">Tu es... <?php  echo $getProfil[0]->nameResult;?> !</h1>
         <div class="ecoloDesc">
