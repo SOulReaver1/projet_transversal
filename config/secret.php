@@ -3,7 +3,7 @@
     
 $secret["db"] = [
     "host" => "localhost",
-    "username" => "ilandev",
-    "pwd" => "BilanX6655",
-    "dbname" => "ilandevg_",
+    "username" => "admin",
+    "pwd" => "password",
+    "dbname" => "pt",
 ];
